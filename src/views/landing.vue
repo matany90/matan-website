@@ -1,3 +1,5 @@
 <template>
-  <div class="primary--text">Langing page</div>
+  <m-button rounded color="primary">
+    Say Hello
+  </m-button>
 </template>
