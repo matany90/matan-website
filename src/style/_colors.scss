@@ -1,0 +1,28 @@
+$matan-colors: (
+  "primary": #2469EB,
+  "secondary": #022EA9,
+  "blue": (
+    "light": #CEE4FB,
+  ),
+  "grey": (
+    "light": #EEEFEF,
+    "purple": #BEBDD1,
+    "blue": #F4F6F8,
+    "middle": #AAAAAA,
+    "dark": #2D2B39,
+    "border": #D6DDE5,
+  ),
+  "black": (
+    "dark": #0E0D13,
+  ),
+  "success": #01D6AA,
+  "warn": #F2C94C,
+  "error": #D20000,
+  "disabled": #D3D3D3,
+);
+
+$platforms: (
+  "whatsapp": #25d366,
+  "telegram": #0088cc,
+  "outlook": #0072c6,
+);

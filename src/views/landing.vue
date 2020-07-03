@@ -1,3 +1,3 @@
 <template>
-  <div>Langing page</div>
+  <div class="primary--text">Langing page</div>
 </template>
