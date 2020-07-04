@@ -1,4 +1,8 @@
-$title-font-family: "Montserrat", sans-serif;
+// title font
+$title-font-family: "Exo", sans-serif;
+$title-card--font-size: 20px;
+
+// root font
 $root-font-family: "Open Sans", sans-serif;
 $root-font-color: #000000;
 $root-font-size: 15px;
@@ -16,6 +20,9 @@ $font-weights: (
 
 // borders
 $border-radius: 7px;
+
+// card radius
+$card-border-radius: 15px;
 
 // menu
 $side-bar-width: 70px;

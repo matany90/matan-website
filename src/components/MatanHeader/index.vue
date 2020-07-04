@@ -25,7 +25,7 @@
 
 .matan-header {
   width: 100%;
-  background: green;
+  height: 150px;
   &--left {
     width: 50%;
   }
