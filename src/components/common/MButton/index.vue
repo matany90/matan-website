@@ -77,7 +77,7 @@ export default {
 <style lang="scss">
 @import "../../../style/_main.scss";
 
-$btn-height: 40px;
+$btn-height: 50px;
 
 // button colors
 $primary: map-deep-get($matan-colors, "primary");
@@ -89,7 +89,7 @@ $primary: map-deep-get($matan-colors, "primary");
   // text
   color: white;
   white-space: nowrap;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-family: $root-font-family;
   text-decoration: none;
   letter-spacing: $btn-letter-spacing;
@@ -97,7 +97,7 @@ $primary: map-deep-get($matan-colors, "primary");
 
   // button
   outline: 0;
-  width: 100%;
+  width: 120px;
   margin: 5px 0;
   padding: 0 2px;
   cursor: pointer;
@@ -116,7 +116,7 @@ $primary: map-deep-get($matan-colors, "primary");
   &--primary {
     color: $primary;
     background: transparent;
-    border: 1.5px solid $primary;
+    border: 2px solid $primary;
 
     &:hover {
       color: white;

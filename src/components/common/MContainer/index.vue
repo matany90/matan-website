@@ -1,14 +1,21 @@
 <template>
-  <div class="m.container">
-    <slot />
+  <div class="m-container">
+    <div class="m-container--inside">
+      <slot />
+    </div>
   </div>
 </template>
 
 <style lang="scss">
-.m.container {
+@import "../../../style/_main.scss";
+
+.m-container {
   display: flex;
-  height: 100%;
-  width: 100%;
-  max-width: 100%;
+  justify-content: center;
+  flex: 1;
+
+  &--inside {
+    width: $inside-container-width;
+  }
 }
 </style>

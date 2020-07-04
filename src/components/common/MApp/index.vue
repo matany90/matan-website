@@ -28,7 +28,7 @@ body {
 }
 
 body {
-  background: map-deep-get($matan-colors, "grey", "blue");
+  background: map-deep-get($matan-colors, "white");
 }
 
 .m-app {

@@ -1,3 +1,5 @@
 <template>
-  <matan-header />
+  <m-container>
+    <matan-header />
+  </m-container>
 </template>

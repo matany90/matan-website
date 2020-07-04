@@ -1,17 +1,22 @@
 <template>
   <!-- Header container -->
   <div class="matan-header">
-    <!-- Left Header -->
-    <div class="matan-header--left">
-      TEST
-    </div>
+    <!-- Row header -->
+    <m-row>
+      <!-- Left column -->
+      <m-col class="matan-header--left">
+        <!-- website's Icon -->
+        <div class="matan-header--icon">ICON</div>
+      </m-col>
 
-    <!-- Right header -->
-    <div class="matan-header--right">
-      <m-button class="matan-header--button" rounded color="primary">
-        Say Hello
-      </m-button>
-    </div>
+      <!-- Right column -->
+      <m-col class="matan-header--right">
+        <!-- Button -->
+        <m-button class="matan-header--button" rounded color="primary">
+          Say Hello
+        </m-button>
+      </m-col>
+    </m-row>
   </div>
 </template>
 
@@ -19,26 +24,28 @@
 @import "../../style/_main.scss";
 
 .matan-header {
-  height: 10%;
   width: 100%;
-  display: flex;
-
-  &--right {
-    background: green;
+  background: green;
+  &--left {
     width: 50%;
-    display: flex;
-    justify-content: flex-end;
   }
 
-  &--left {
-    background: red;
+  &--right {
     width: 50%;
+    align-items: flex-end;
   }
 
   &--button {
-    width: 15vh;
-    margin-right: 30px;
-    margin-top: 30px;
+    margin-top: 4vh;
+    margin-right: 3vh;
+    @media (max-width: 1400px) {
+      margin-right: 15vh;
+    }
+  }
+
+  &--icon {
+    margin-top: 10%;
+    margin-left: 10%;
   }
 }
 </style>
