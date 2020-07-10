@@ -25,10 +25,15 @@
 
     <!-- Cards -->
     <matan-cards class="overlay--cards" />
+
+    <!-- Technologies -->
+    <matan-technologies />
   </m-container>
 </template>
 
 <style lang="scss">
+@import "@/style/_main.scss";
+
 .overlay {
   // define gradient overlay
   &--gradient {
@@ -37,9 +42,13 @@
 
   // define cards overlay
   &--cards {
-    margin-top: 500px;
+    margin-top: 100px;
     width: 90%;
     position: absolute;
+
+    // @include media("<=tablet") {
+    //   margin-top: -40%;
+    // }
   }
 }
 </style>

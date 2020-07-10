@@ -33,7 +33,7 @@
     font-family: $section-title-font-family;
     font-size: $section-title-font-size;
     margin-bottom: 15px;
-    margin-top: 100px;
+    margin-top: 130px;
     @include media("<tablet") {
       margin-top: 50px;
     }
