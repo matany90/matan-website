@@ -49,15 +49,27 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 47px;
+    height: 47px;
     border-radius: $icon-button-border-radius;
     border: 2px solid map-get($matan-colors, "secondary");
     background: map-deep-get($matan-colors, "primary");
+    @include transition(background 0.4s);
+
     &--svg {
-      width: 50%;
-      height: 50%;
+      width: 40%;
+      height: 40%;
       filter: brightness(0) invert(1);
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: white;
+    }
+
+    // change icon's color on parent hover
+    &:hover > .m-icon--button--svg {
+      filter: none;
     }
   }
 }
