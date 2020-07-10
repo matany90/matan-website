@@ -4,13 +4,15 @@
     <div class="cards">
       <m-card v-for="(card, i) in cards" :key="i" class="cards--card">
         <!-- Icon -->
-        <div class="icon cards--icon">{{ card.icon }}</div>
+        <div class="icon cards--icon">
+          <m-icon :name="card.icon" />
+        </div>
 
         <!-- title -->
         <div class="title cards--title">{{ card.title }}</div>
 
         <!-- body -->
-        <div>{{ card.content }}</div>
+        <div class="cards--body">{{ card.content }}</div>
       </m-card>
     </div>
   </div>
@@ -24,18 +26,21 @@ export default {
       cards: [
         {
           title: "Front-end Developer",
-          icon: "ICON",
-          content: "content"
+          icon: "code",
+          content:
+            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
         },
         {
           title: "Back-end Developer",
-          icon: "ICON",
-          content: "content"
+          icon: "server",
+          content:
+            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
         },
         {
           title: "Cloud Architecture",
-          icon: "ICON",
-          content: "content"
+          icon: "cloud",
+          content:
+            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
         }
       ]
     }
@@ -75,7 +80,12 @@ export default {
     font-weight: map-get($font-weights, "bold");
   }
 
+  &--body {
+    font-size: $card-content-font-size;
+  }
+
   &--icon {
+    margin-top: 50px;
     margin-bottom: 25px;
   }
 }
