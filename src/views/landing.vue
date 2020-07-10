@@ -2,7 +2,7 @@
   <m-container>
     <!-- Header -->
     <matan-header />
-
+    <m-icon type="button" name="facebook" />
     <!-- Linear Gradient text box -->
     <matan-gradient-text class="overlay--gradient">
       <!-- Title -->
