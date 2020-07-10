@@ -3,85 +3,43 @@
     <!-- Header -->
     <matan-header />
 
-    <!-- Cards container -->
-    <div class="container">
-      <div class="cards">
-        <m-card v-for="(card, i) in cards" :key="i" class="cards--card">
-          <!-- Icon -->
-          <div class="icon cards--icon">{{ card.icon }}</div>
+    <!-- Linear Gradient text box -->
+    <matan-gradient-text class="overlay--gradient">
+      <!-- Title -->
+      <template v-slot:title>
+        <div>Hi, I'm Matan</div>
+      </template>
 
-          <!-- title -->
-          <div class="title cards--title">{{ card.title }}</div>
+      <!-- Body -->
+      <template v-slot:body>
+        <div>
+          Since beginning my journey as a freelance designer nearly 10 years
+          ago, I've done remote work for agencies, consulted for startups, and
+          collaborated with talented people to create digital products for both
+          business and consumer use. I'm quietly confident, naturally curious,
+          and perpetually working on improving my chops one design problem at a
+          time.
+        </div>
+      </template>
+    </matan-gradient-text>
 
-          <!-- body -->
-          <div>{{ card.content }}</div>
-        </m-card>
-      </div>
-    </div>
+    <!-- Cards -->
+    <matan-cards class="overlay--cards" />
   </m-container>
 </template>
 
-<script>
-export default {
-  // local state
-  data() {
-    return {
-      cards: [
-        {
-          title: "First title",
-          icon: "ICON",
-          content: "content"
-        },
-        {
-          title: "Second title",
-          icon: "ICON",
-          content: "content"
-        },
-        {
-          title: "Third title",
-          icon: "ICON",
-          content: "content"
-        }
-      ]
-    }
-  }
-}
-</script>
-
 <style lang="scss">
-@import "../style/_main.scss";
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.cards {
-  display: flex;
-  flex-direction: row;
-  height: 80vh;
-  width: 100%;
-
-  @include media("<=tablet") {
-    flex-direction: column;
+.overlay {
+  // define gradient overlay
+  &--gradient {
+    position: relative;
   }
 
-  &--card {
-    margin: 5px;
-  }
-
-  &--title {
-    margin-bottom: 25px;
-    font-family: $title-font-family;
-    font-size: $title-card--font-size;
-    color: map-deep-get($matan-colors, "primary");
-    font-weight: map-get($font-weights, "bold");
-  }
-
-  &--icon {
-    margin-bottom: 25px;
+  // define cards overlay
+  &--cards {
+    margin-top: 500px;
+    width: 90%;
+    position: absolute;
   }
 }
 </style>

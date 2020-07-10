@@ -37,11 +37,8 @@ body {
   color: $root-font-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   line-height: $root-line-height;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 
   .primary {
