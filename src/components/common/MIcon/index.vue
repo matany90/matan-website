@@ -38,7 +38,6 @@ export default {
   &--svg {
     width: 60px;
     height: 60px;
-    filter: invert(1);
   }
 }
 </style>
