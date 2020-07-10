@@ -1,8 +1,6 @@
 <template>
   <div class="m-container">
-    <div class="m-container--inside">
-      <slot />
-    </div>
+    <slot />
   </div>
 </template>
 
@@ -11,11 +9,8 @@
 
 .m-container {
   display: flex;
-  justify-content: center;
   flex: 1;
-
-  &--inside {
-    width: $inside-container-width;
-  }
+  justify-content: center;
+  flex-direction: column;
 }
 </style>

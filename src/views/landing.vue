@@ -6,7 +6,7 @@
     <!-- Cards container -->
     <div class="container">
       <div class="cards">
-        <m-card v-for="(card, i) in cards" :key="i">
+        <m-card v-for="(card, i) in cards" :key="i" class="cards--card">
           <!-- Icon -->
           <div class="icon cards--icon">{{ card.icon }}</div>
 
@@ -54,16 +54,22 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .cards {
   display: flex;
   flex-direction: row;
   height: 80vh;
-  width: 80%;
+  width: 100%;
 
   @include media("<=tablet") {
     flex-direction: column;
+  }
+
+  &--card {
+    margin: 5px;
   }
 
   &--title {
