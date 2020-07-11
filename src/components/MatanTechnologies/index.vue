@@ -79,7 +79,7 @@ export default {
 
       &--icon {
         width: 200px;
-        height: 60px;
+        height: 70px;
         margin: 20px;
       }
     }
