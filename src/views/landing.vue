@@ -28,6 +28,9 @@
 
     <!-- Technologies -->
     <matan-technologies />
+
+    <!-- Recent work -->
+    <matan-works />
   </m-container>
 </template>
 
