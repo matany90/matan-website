@@ -1,5 +1,5 @@
 <template>
-  <div class="m-icon">
+  <div class="m-icon" v-on="$listeners">
     <div v-if="type === 'button'" class="m-icon--button">
       <img :src="iconPath" class="m-icon--button--svg" />
     </div>

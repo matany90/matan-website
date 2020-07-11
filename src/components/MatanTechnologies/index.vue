@@ -30,7 +30,7 @@ export default {
     return {
       technologies: [
         ["react", "vue", "nodejs", "python"],
-        ["kubernetes", "docker", "firestore", "google-cloud"]
+        ["kubernetes", "docker", "firestore", "cloud"]
       ]
     }
   }
