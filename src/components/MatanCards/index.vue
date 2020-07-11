@@ -4,8 +4,8 @@
     <div class="cards">
       <m-card v-for="(card, i) in cards" :key="i" class="cards--card">
         <!-- Icon -->
-        <div class="icon cards--icon">
-          <m-icon :name="card.icon" />
+        <div class="icon cards--icon-container">
+          <m-icon :name="card.icon" class="cards--icon-container--icon" />
         </div>
 
         <!-- title -->
@@ -84,9 +84,17 @@ export default {
     font-size: $card-content-font-size;
   }
 
-  &--icon {
+  &--icon-container {
     margin-top: 50px;
     margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--icon {
+      width: 60px;
+      height: 60px;
+    }
   }
 }
 </style>

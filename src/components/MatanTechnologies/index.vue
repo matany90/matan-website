@@ -1,32 +1,88 @@
 <template>
   <div class="matan-technologies">
+    <!-- Title -->
     <div class="matan-technologies--title">
-      I have experience with a variety of technologies
+      I have experience with a variety of technologies:
+    </div>
+
+    <!-- Icons -->
+    <div class="matan-technologies--container">
+      <div
+        v-for="(techLine, j) in technologies"
+        class="matan-technologies--container--icons"
+        :key="j"
+      >
+        <m-icon
+          v-for="(tech, i) in techLine"
+          :key="i"
+          :name="tech"
+          class="matan-technologies--container--icons--icon"
+        />
+      </div>
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  // local state
+  data() {
+    return {
+      technologies: [
+        ["react", "vue", "nodejs", "python"],
+        ["kubernetes", "docker", "firestore", "google-cloud"]
+      ]
+    }
+  }
+}
+</script>
 <style lang="scss">
 @import "../../style/_main.scss";
 
 .matan-technologies {
   display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: red;
-  height: 40vh;
-  margin-top: 55vh;
+  height: 60vh;
+  margin-top: 80vh;
 
-  // @include media("<=tablet") {
-  //   height: 90vh;
-  // }
+  @include media(">phone", "<desktop") {
+    margin-top: 50vh;
+  }
+
+  @include media("<tablet") {
+    margin-top: 260vh;
+  }
 
   &--title {
     font-family: $section-title-font-family;
     font-size: $section-title-font-size;
     color: black;
+  }
+
+  &--container {
+    display: flex;
+    flex-direction: column;
+    @include media("<=tablet") {
+      flex-direction: row;
+    }
+    &--icons {
+      display: flex;
+      flex-direction: row;
+      @include media("<=tablet") {
+        flex-direction: column;
+      }
+      margin-top: 50px;
+
+      &--icon {
+        width: 200px;
+        height: 60px;
+        margin: 20px;
+      }
+    }
   }
 }
 </style>

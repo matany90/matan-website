@@ -41,11 +41,6 @@
 
   @include shadow(2px 2px 6px 2px rgba(0, 0, 0, 0.1));
 
-  // head icon
-  &--icon {
-    color: red;
-  }
-
   // title class
   &--title {
     padding: 0.5em 1em;

@@ -42,13 +42,13 @@
 
   // define cards overlay
   &--cards {
-    margin-top: 100px;
     width: 90%;
     position: absolute;
+    top: 80%;
 
-    // @include media("<=tablet") {
-    //   margin-top: -40%;
-    // }
+    @include media("<=tablet") {
+      top: 90%;
+    }
   }
 }
 </style>
