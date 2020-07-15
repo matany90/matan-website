@@ -47,20 +47,22 @@ export default {
   align-items: center;
   width: 100%;
   height: 60vh;
-  margin-top: 80vh;
+  margin-top: 60vh;
 
   @include media(">phone", "<desktop") {
     margin-top: 50vh;
   }
 
   @include media("<tablet") {
-    margin-top: 260vh;
+    margin-top: 235vh;
   }
 
   &--title {
     font-family: $section-title-font-family;
     font-size: $section-title-font-size;
     color: black;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
   &--container {
@@ -78,7 +80,7 @@ export default {
       margin-top: 50px;
 
       &--icon {
-        width: 200px;
+        width: 150px;
         height: 70px;
         margin: 20px;
       }

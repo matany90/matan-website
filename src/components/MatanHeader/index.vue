@@ -6,7 +6,7 @@
       <!-- Left column -->
       <m-col class="matan-header--left">
         <!-- website's Icon -->
-        <div class="matan-header--icon">ICON</div>
+        <m-icon name="logo1.png" class="matan-header--left--icon" />
       </m-col>
 
       <!-- Right column -->
@@ -26,8 +26,16 @@
 .matan-header {
   width: 100%;
   height: 150px;
+
   &--left {
     width: 50%;
+
+    &--icon {
+      margin-top: 4vh;
+      margin-left: 3vh;
+      width: 50px;
+      height: 60px;
+    }
   }
 
   &--right {
@@ -41,11 +49,6 @@
     @media (max-width: 1400px) {
       margin-right: 15vh;
     }
-  }
-
-  &--icon {
-    margin-top: 10%;
-    margin-left: 10%;
   }
 }
 </style>

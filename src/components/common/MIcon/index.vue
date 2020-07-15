@@ -30,7 +30,14 @@ export default {
      * Get icon path
      */
     iconPath() {
-      return require(`../../../assets/icons/${this.name}.svg`)
+      let name = this.name
+      let endWith = "svg"
+      if (this.name.includes(".png")) {
+        name = this.name.split(".")[0]
+        endWith = "png"
+      }
+
+      return require(`../../../assets/icons/${name}.${endWith}`)
     }
   }
 }
