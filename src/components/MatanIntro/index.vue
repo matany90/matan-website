@@ -35,12 +35,16 @@
     font-size: $title-font-size;
     font-family: $title-font-family;
     margin-top: 5vh;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
   // Subtitle
   &--subtitle {
     font-size: $subtitle-font-size;
     margin-top: 2vh;
+    margin-left: 15%;
+    margin-right: 15%;
   }
 
   // image
