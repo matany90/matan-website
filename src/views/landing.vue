@@ -3,6 +3,9 @@
     <!-- Header -->
     <matan-header />
 
+    <!-- Intro -->
+    <matan-intro />
+
     <!-- Linear Gradient text box -->
     <matan-gradient-text class="overlay--gradient">
       <!-- Title -->
@@ -30,7 +33,6 @@
 
     <!-- Recent work -->
     <matan-works />
-    <!-- <m-flip-card /> -->
   </m-container>
 </template>
 
@@ -47,10 +49,10 @@
   &--cards {
     width: 90%;
     position: absolute;
-    top: 60%;
+    margin-bottom: 30vh;
 
     @include media("<=tablet") {
-      top: 70%;
+      margin-bottom: 150vh;
     }
   }
 }
