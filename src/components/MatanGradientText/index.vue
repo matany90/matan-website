@@ -28,8 +28,8 @@
     map-deep-get($matan-colors, "primary"),
     map-deep-get($matan-colors, "secondary")
   );
-  // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  // -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
 
   &--title {
     font-family: $section-title-font-family;

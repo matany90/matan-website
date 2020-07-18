@@ -54,7 +54,7 @@
     // inner images
     &--image {
       width: 30vh;
-      height: 35vh;
+      height: 37vh;
     }
   }
 }
