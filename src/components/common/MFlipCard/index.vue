@@ -2,12 +2,10 @@
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        <img alt="Avatar" style="width:300px;height:300px;" />
+        <slot name="front"></slot>
       </div>
       <div class="flip-card-back">
-        <h1>John Doe</h1>
-        <p>Architect & Engineer</p>
-        <p>We love that guy</p>
+        <slot name="back"></slot>
       </div>
     </div>
   </div>
@@ -21,7 +19,6 @@
   background-color: transparent;
   width: 300px;
   height: 200px;
-  border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -50,16 +47,32 @@
   backface-visibility: hidden;
 }
 
+// container flip card style
+@mixin base-flip-card-container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  // design
+  background: white;
+  border-radius: $card-border-radius;
+  border: 1px solid map-deep-get($matan-colors, "grey", "light");
+
+  @include shadow(2px 2px 6px 2px rgba(0, 0, 0, 0.1));
+}
+
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
-  color: black;
+  // match size to the aviliable space
+  @include base-flip-card-container;
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
-  color: white;
+  @include base-flip-card-container;
   transform: rotateY(180deg);
 }
 </style>

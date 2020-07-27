@@ -1,7 +1,7 @@
 import { componentsMap } from "@/components/common"
 
 /**
- * RELEIFY Design System
+ * Design System
  */
 export default {
   /**
