@@ -31,13 +31,17 @@
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
 
+  @include media("<tablet") {
+    height: 90vh;
+  }
+
   &--title {
     font-family: $section-title-font-family;
     font-size: $section-title-font-size;
     margin-bottom: 15px;
     margin-top: 170px;
     @include media("<tablet") {
-      margin-top: 50px;
+      margin-top: 100px;
     }
   }
 

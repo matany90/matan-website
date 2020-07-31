@@ -54,7 +54,7 @@ export default {
   }
 
   @include media("<tablet") {
-    margin-top: 235vh;
+    margin-top: 265vh;
   }
 
   &--title {

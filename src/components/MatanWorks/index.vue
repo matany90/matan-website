@@ -21,19 +21,21 @@
 
     <!-- Work Flip cards -->
     <div class="matan-flip-cards">
-      <div v-for="(card, i) in worksCards" :key="i">
-        <!-- Render Each Card -->
-        <m-flip-card class="matan-flip-cards--card">
-          <!-- Front card -->
-          <template v-slot:front>
-            <div>test FRONT</div>
-          </template>
+      <div class="matan-flip-cards--overlay">
+        <div v-for="(card, i) in worksCards" :key="i">
+          <!-- Render Each Card -->
+          <m-flip-card class="matan-flip-cards--card">
+            <!-- Front card -->
+            <template v-slot:front>
+              <div>test FRONT</div>
+            </template>
 
-          <!-- Back card -->
-          <template v-slot:back>
-            <div>test Back</div>
-          </template>
-        </m-flip-card>
+            <!-- Back card -->
+            <template v-slot:back>
+              <div>test Back</div>
+            </template>
+          </m-flip-card>
+        </div>
       </div>
     </div>
   </div>
@@ -68,17 +70,6 @@ export default {
     margin-top: 150px;
     position: relative;
   }
-
-  // define cards overlay
-  &--cards {
-    width: 90%;
-    position: absolute;
-    top: 80%;
-
-    @include media("<=tablet") {
-      top: 90%;
-    }
-  }
 }
 
 // work flip cards
@@ -87,6 +78,18 @@ export default {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  &--overlay {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 365%;
+
+    @include media("<tablet") {
+      flex-direction: column;
+      top: 635%;
+    }
+  }
 
   // card
   &--card {
