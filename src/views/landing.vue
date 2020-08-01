@@ -33,6 +33,12 @@
 
     <!-- Recent work -->
     <matan-works />
+
+    <!-- Recommnedations -->
+    <!-- <matan-recommendation /> -->
+
+    <!-- Footer -->
+    <matan-footer />
   </m-container>
 </template>
 
@@ -49,10 +55,10 @@
   &--cards {
     width: 90%;
     position: absolute;
-    margin-bottom: 30vh;
+    margin-bottom: 180vh;
 
     @include media("<=tablet") {
-      margin-bottom: 185vh;
+      margin-bottom: 500vh;
     }
   }
 }
