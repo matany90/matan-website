@@ -11,7 +11,15 @@
 
       <!-- Right column -->
       <m-col class="matan-header--right">
-        <!-- Button -->
+        <!-- Buttons -->
+        <m-button
+          class="matan-header--button--cv"
+          rounded
+          color="primary"
+          @click="onCbButtonClick"
+        >
+          Get my CV
+        </m-button>
         <m-button class="matan-header--button" rounded color="primary">
           Say Hello
         </m-button>
@@ -20,6 +28,17 @@
   </div>
 </template>
 
+<script>
+export default {
+  // methods
+  methods: {
+    onCbButtonClick() {
+      window.location.href =
+        "https://srv-file10.gofile.io/download/0sZIg1/CV.pdf"
+    }
+  }
+}
+</script>
 <style lang="scss">
 @import "../../style/_main.scss";
 
@@ -41,6 +60,8 @@
   &--right {
     width: 50%;
     align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: row;
   }
 
   &--button {
@@ -48,6 +69,11 @@
     margin-right: 3vh;
     @media (max-width: 1400px) {
       margin-right: 15vh;
+    }
+
+    &--cv {
+      border: none;
+      margin-right: 7px;
     }
   }
 }

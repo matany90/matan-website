@@ -58,7 +58,8 @@ export default {
           link: "https://www.linkedin.com/in/matan-yechiel-62117818b/"
         },
         {
-          name: "cv"
+          name: "cv",
+          link: "https://srv-file10.gofile.io/download/0sZIg1/CV.pdf"
         },
         {
           name: "github",
@@ -105,6 +106,7 @@ export default {
 
   &--title {
     font-family: $root-font-family;
+    font-size: $footer-title-size;
     margin-top: 5vh;
     margin-left: 20%;
     margin-right: 20%;
@@ -118,7 +120,7 @@ export default {
     margin-bottom: -87px;
 
     @include media("<tablet") {
-      margin-bottom: -50px;
+      margin-bottom: -45px;
     }
   }
 
@@ -126,7 +128,7 @@ export default {
     width: 120vh;
 
     @include media("<tablet") {
-      width: 80vh;
+      width: 70vh;
     }
   }
 
@@ -143,8 +145,8 @@ export default {
 
     &--icon {
       margin-top: 5vh;
-      margin-right: 8px;
-      margin-left: 8px;
+      margin-right: 15px;
+      margin-left: 15px;
     }
   }
 

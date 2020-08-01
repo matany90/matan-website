@@ -55,7 +55,7 @@
   &--cards {
     width: 90%;
     position: absolute;
-    margin-bottom: 180vh;
+    margin-bottom: 205vh;
 
     @include media("<=tablet") {
       margin-bottom: 500vh;

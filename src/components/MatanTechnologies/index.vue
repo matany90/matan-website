@@ -29,8 +29,8 @@ export default {
   data() {
     return {
       technologies: [
-        ["react", "vue", "nodejs", "python"],
-        ["kubernetes", "docker", "firestore", "google-cloud"]
+        ["react", "vue", "nodejs", "python", "javascript"],
+        ["kubernetes", "docker", "firestore", "google-cloud", "mongodb"]
       ]
     }
   }
@@ -47,7 +47,7 @@ export default {
   align-items: center;
   width: 100%;
   height: 60vh;
-  margin-top: 60vh;
+  margin-top: 80vh;
 
   @include media(">phone", "<desktop") {
     margin-top: 50vh;
