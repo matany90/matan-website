@@ -29,8 +29,8 @@ export default {
   data() {
     return {
       technologies: [
-        ["react", "vue", "nodejs", "python", "javascript"],
-        ["kubernetes", "docker", "firestore", "google-cloud", "mongodb"]
+        ["react", "vue", "nodejs", "python", "javascript", "microservices"],
+        ["kubernetes", "docker", "firestore", "google-cloud", "mongodb", "grpc"]
       ]
     }
   }
