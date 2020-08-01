@@ -60,7 +60,7 @@ export default {
     height: 47px;
     border-radius: $icon-button-border-radius;
     border: 2px solid map-get($matan-colors, "secondary");
-    background: map-deep-get($matan-colors, "primary");
+    background: transparent;
     @include transition(background 0.4s);
 
     &--svg {
