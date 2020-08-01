@@ -33,6 +33,10 @@
             @click="onClickIcon(buttonIcon)"
           />
         </div>
+        <!-- Made by -->
+        <div class="matan-footer--made-by">
+          Made by Matan Yechiel © 2020
+        </div>
       </template>
     </matan-gradient-text>
   </div>
@@ -101,7 +105,6 @@ export default {
 
   &--title {
     font-family: $root-font-family;
-    // color: map-get($matan-colors, "secondary");
     margin-top: 5vh;
     margin-left: 20%;
     margin-right: 20%;
@@ -112,7 +115,7 @@ export default {
   }
 
   &--img {
-    margin-bottom: -103px;
+    margin-bottom: -87px;
 
     @include media("<tablet") {
       margin-bottom: -50px;
@@ -143,6 +146,11 @@ export default {
       margin-right: 8px;
       margin-left: 8px;
     }
+  }
+
+  &--made-by {
+    margin-top: 8vh;
+    font-size: $made-by-font-size;
   }
 }
 </style>
