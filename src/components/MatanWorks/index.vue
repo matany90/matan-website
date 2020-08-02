@@ -86,7 +86,7 @@ export default {
 .overlay {
   // define gradient overlay
   &--gradient {
-    margin-top: 150px;
+    margin-top: 330px;
     position: relative;
   }
 }
@@ -116,7 +116,7 @@ export default {
 
     @include media("<tablet") {
       flex-direction: column;
-      margin-top: 180vh;
+      margin-top: 160vh;
     }
   }
 

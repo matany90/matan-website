@@ -58,7 +58,7 @@
     margin-bottom: 205vh;
 
     @include media("<=tablet") {
-      margin-bottom: 500vh;
+      margin-bottom: 535vh;
     }
   }
 }
