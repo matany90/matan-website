@@ -1,6 +1,6 @@
 <template>
   <!-- Header container -->
-  <div class="matan-header">
+  <div class="matan-header" v-on="$listeners">
     <!-- Row header -->
     <m-row>
       <!-- Left column -->
@@ -11,18 +11,25 @@
 
       <!-- Right column -->
       <m-col class="matan-header--right">
-        <!-- Buttons -->
-        <m-button
-          class="matan-header--button--cv"
-          rounded
-          color="primary"
-          @click="onCbButtonClick"
-        >
-          Get my CV
-        </m-button>
-        <m-button class="matan-header--button" rounded color="primary">
-          Say Hello
-        </m-button>
+        <div class="matan-header--buttons">
+          <!-- Buttons -->
+          <m-button
+            class="matan-header--button--cv"
+            rounded
+            color="primary"
+            @click="onCbButtonClick"
+          >
+            Get my CV
+          </m-button>
+          <m-button class="matan-header--button" rounded color="primary">
+            Say Hello
+          </m-button>
+        </div>
+        <m-icon
+          class="matan-header--menu"
+          name="open-menu"
+          @click="onMenuClick"
+        />
       </m-col>
     </m-row>
   </div>
@@ -35,6 +42,10 @@ export default {
     onCbButtonClick() {
       window.location.href =
         "https://srv-file10.gofile.io/download/0sZIg1/CV.pdf"
+    },
+
+    onMenuClick() {
+      this.$emit("on-menu-press")
     }
   }
 }
@@ -74,6 +85,21 @@ export default {
     &--cv {
       border: none;
       margin-right: 7px;
+    }
+  }
+
+  &--buttons {
+    @include media("<tablet") {
+      display: none;
+    }
+  }
+
+  &--menu {
+    width: 30px;
+    height: 30px;
+    margin-right: 3vh;
+    @include media(">=tablet") {
+      display: none;
     }
   }
 }

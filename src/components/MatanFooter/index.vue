@@ -117,18 +117,22 @@ export default {
   }
 
   &--img {
-    margin-bottom: -87px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 
     @include media("<tablet") {
-      margin-bottom: -45px;
+      width: 100%;
     }
   }
 
   &--logo {
-    width: 120vh;
-
+    width: 60%;
+    margin-bottom: -5%;
     @include media("<tablet") {
-      width: 70vh;
+      width: 100%;
+      margin-bottom: -8%;
     }
   }
 

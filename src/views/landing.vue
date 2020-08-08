@@ -1,7 +1,8 @@
 <template>
   <m-container>
     <!-- Header -->
-    <matan-header />
+    <matan-header @on-menu-press="toggleMenu" />
+    <m-menu v-if="isMenuOpen" @on-menu-press="toggleMenu" />
 
     <!-- Intro -->
     <matan-intro />
@@ -42,6 +43,26 @@
   </m-container>
 </template>
 
+<script>
+export default {
+  // local state
+  data() {
+    return {
+      isMenuOpen: false
+    }
+  },
+
+  // methods
+  methods: {
+    /**
+     * Toggle is menu
+     */
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen
+    }
+  }
+}
+</script>
 <style lang="scss">
 @import "@/style/_main.scss";
 
