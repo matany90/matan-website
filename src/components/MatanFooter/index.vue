@@ -147,6 +147,11 @@ export default {
       margin-top: 5vh;
       margin-right: 15px;
       margin-left: 15px;
+
+      @include media("<tablet") {
+        margin-right: 8px;
+        margin-left: 8px;
+      }
     }
   }
 

@@ -12,7 +12,31 @@
         <div class="title cards--title">{{ card.title }}</div>
 
         <!-- body -->
-        <div class="cards--body">{{ card.content }}</div>
+        <div class="cards--body">
+          <!-- Intro list -->
+          <ul
+            class="cards--body--intro-list"
+            v-for="(line, i) in card.intro.lines"
+            :key="i"
+          >
+            <li class="cards--body--intro-list--line">{{ line }}</li>
+          </ul>
+
+          <!-- Frameworks and tools -->
+          <div class="cards--body--tools">
+            <!-- Framework Title -->
+            <div class="cards--body--tools--title">{{ card.tools.title }}</div>
+
+            <!-- Frameworks List -->
+            <ul
+              class="cards--body--tools--list"
+              v-for="(line, i) in card.tools.lines"
+              :key="i"
+            >
+              <li>{{ line }}</li>
+            </ul>
+          </div>
+        </div>
       </m-card>
     </div>
   </div>
@@ -27,20 +51,71 @@ export default {
         {
           title: "Front-end Developer",
           icon: "code",
-          content:
-            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+          intro: {
+            lines: [
+              "Building user interfaces from scratch.",
+              "Using various state management like Redux, Vuex, Mobx.",
+              "Experience in building complex UI systems with huge scale of data."
+            ]
+          },
+          tools: {
+            title: "Front-end Frameworks and Tools:",
+            lines: [
+              "Vue.js",
+              "React.js",
+              "React-Native",
+              "SCSS",
+              "Vuex",
+              "Redux",
+              "Mobx"
+            ]
+          }
         },
         {
           title: "Back-end Developer",
           icon: "server",
-          content:
-            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+          intro: {
+            lines: [
+              "Experience in various server side architectures - Monolith and Microservices.",
+              "Integration with a rich variety of third-party API's",
+              "Use of relational and non-relational databases."
+            ]
+          },
+          tools: {
+            title: "Back-end Tools and Frameworks:",
+            lines: [
+              "Node.js",
+              "Express",
+              "gRCP",
+              "Microservices",
+              "Apache Beam",
+              "Python",
+              "Bash",
+              "Firestore DB",
+              "Big-Query DB",
+              "Mongo DB"
+            ]
+          }
         },
         {
           title: "Cloud Architecture",
           icon: "cloud",
-          content:
-            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+          intro: {
+            lines: [
+              "Experience in GCP Cloud environment.",
+              "Infrastructure management on top of Docker and Kubernetes"
+            ]
+          },
+          tools: {
+            title: "Cloud Architecture Tools and Frameworks:",
+            lines: [
+              "Google Cloud",
+              "Docker",
+              "Kubernetes",
+              "Pubsub",
+              "Dataflow"
+            ]
+          }
         }
       ]
     }
@@ -61,11 +136,12 @@ export default {
 .cards {
   display: flex;
   flex-direction: row;
-  height: 80vh;
-  width: 100%;
+  height: 800px;
+  width: 80%;
 
   @include media("<=tablet") {
     flex-direction: column;
+    height: 100%;
   }
 
   &--card {
@@ -82,6 +158,30 @@ export default {
 
   &--body {
     font-size: $card-content-font-size;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10px;
+
+    &--intro-list {
+      list-style-type: none;
+
+      &--line {
+        margin-bottom: 10px;
+      }
+    }
+
+    &--tools {
+      &--title {
+        margin-top: 50px;
+        color: map-deep-get($matan-colors, "primary");
+        font-weight: map-get($font-weights, "bold");
+      }
+
+      &--list {
+        list-style-type: none;
+        margin-top: 7px;
+      }
+    }
   }
 
   &--icon-container {
