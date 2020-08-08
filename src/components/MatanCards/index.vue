@@ -137,11 +137,12 @@ export default {
   display: flex;
   flex-direction: row;
   height: 800px;
-  width: 80%;
+  width: 85%;
 
   @include media("<=tablet") {
     flex-direction: column;
     height: 100%;
+    width: 90%;
   }
 
   &--card {

@@ -49,17 +49,16 @@
   // define gradient overlay
   &--gradient {
     position: relative;
-    background: red;
   }
 
   // define cards overlay
   &--cards {
     width: 90%;
     position: absolute;
-    top: 120vh;
+    top: 130vh;
 
     @include media("<=tablet") {
-      top: 180vh;
+      top: 185vh;
     }
   }
 }
