@@ -3,7 +3,7 @@
     <div class="m-menu--item m-menu--closebtn" @click="onMenuClick">
       &times;
     </div>
-    <div class="m-menu--item">Say Hello</div>
+    <div class="m-menu--item" @click="pushToContact">Say Hello</div>
     <div class="m-menu--item" @click="downloadCV">Get my CV</div>
   </div>
 </template>
@@ -25,6 +25,13 @@ export default {
     downloadCV() {
       window.location.href =
         "https://srv-file10.gofile.io/download/0sZIg1/CV.pdf"
+    },
+
+    /**
+     * Push to contact page
+     */
+    pushToContact() {
+      this.$router.push("/contact")
     }
   }
 }
