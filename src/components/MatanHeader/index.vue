@@ -6,7 +6,11 @@
       <!-- Left column -->
       <m-col class="matan-header--left">
         <!-- website's Icon -->
-        <m-icon name="logo1.png" class="matan-header--left--icon" />
+        <m-icon
+          @click="onIconPress"
+          name="logo1.png"
+          class="matan-header--left--icon"
+        />
       </m-col>
 
       <!-- Right column -->
@@ -55,6 +59,10 @@ export default {
 
     pushToContactPage() {
       this.$router.push("/contact")
+    },
+
+    onIconPress() {
+      this.$router.push("/")
     }
   }
 }
@@ -74,6 +82,7 @@ export default {
       margin-left: 3vh;
       width: 50px;
       height: 60px;
+      cursor: pointer;
     }
   }
 

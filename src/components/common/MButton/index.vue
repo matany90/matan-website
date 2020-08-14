@@ -134,8 +134,6 @@ $primary: map-deep-get($matan-colors, "primary");
 
   &--disabled {
     cursor: not-allowed;
-    background: map-get($matan-colors, "disabled");
-    border: 1px solid darken(map-get($matan-colors, "disabled"), 3);
   }
 }
 </style>

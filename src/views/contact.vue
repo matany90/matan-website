@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="contact-page">
     <!-- Header -->
     <matan-header @on-menu-press="toggleMenu" />
     <m-menu v-if="isMenuOpen" @on-menu-press="toggleMenu" />
@@ -31,7 +31,13 @@
 
     <!-- Submit button -->
     <div class="buttons">
-      <m-button @click="sendEmail" rounded color="primary" :loading="loading">
+      <m-button
+        @click="sendEmail"
+        rounded
+        color="primary"
+        :loading="loading"
+        :disabled="isDisable"
+      >
         Submit
       </m-button>
     </div>
@@ -40,6 +46,7 @@
 
 <script>
 import api from "@/api"
+import { validateEmail } from "../utils"
 
 export default {
   // local state
@@ -85,6 +92,14 @@ export default {
       // close loading
       this.loading = false
     }
+  },
+
+  //computed properties
+  computed: {
+    // Is button disable
+    isDisable() {
+      return !validateEmail(this.email) || !this.name || !this.body
+    }
   }
 }
 </script>
@@ -92,6 +107,22 @@ export default {
 <style lang="scss" scoped>
 @import "@/style/_main.scss";
 
+.contact-page {
+  animation-name: moveInBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+
+  @keyframes moveInBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+}
 .main-logo {
   border-top: 1px map-deep-get($matan-colors, "grey", "light");
   position: relative;
