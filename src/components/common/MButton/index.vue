@@ -5,7 +5,11 @@
     :class="classList"
     v-on="$listeners"
   >
-    <slot></slot>
+    <m-loading
+      style="display: flex; justify-content: center; align-items: center"
+      v-if="loading"
+    />
+    <slot v-else></slot>
   </button>
 </template>
 

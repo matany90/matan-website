@@ -12,8 +12,7 @@
 
     <!-- Title -->
     <div class="main-logo--title">
-      Thanks for taking the time to reach out. <br />
-      How can I help you today?
+      Thanks for taking the time to reach out. How can I help you today?
     </div>
 
     <!-- Form -->
@@ -32,7 +31,7 @@
 
     <!-- Submit button -->
     <div class="buttons">
-      <m-button @click="sendEmail" rounded color="primary">
+      <m-button @click="sendEmail" rounded color="primary" :loading="loading">
         Submit
       </m-button>
     </div>
@@ -52,7 +51,10 @@ export default {
       // form data
       name: "",
       email: "",
-      body: ""
+      body: "",
+
+      // loading
+      loading: false
     }
   },
 
@@ -69,12 +71,19 @@ export default {
      * Send email
      */
     async sendEmail() {
+      // set loading
+      this.loading = true
+
+      // send email
       try {
         const res = await api.mail.send(this.email, this.name, this.body)
         console.log("res", res)
       } catch (e) {
         console.error(e)
       }
+
+      // close loading
+      this.loading = false
     }
   }
 }
@@ -101,9 +110,10 @@ export default {
 
   &--title {
     text-align: center;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 25%;
+    margin-right: 25%;
     margin-top: 10vh;
+    margin-bottom: 2vh;
     font-size: $contact-page-title-size;
     font-weight: $contact-page-title-weight;
   }
@@ -142,5 +152,9 @@ export default {
   justify-content: center;
   align-content: center;
   margin-top: 3vh;
+
+  @include media("<=tablet") {
+    margin-bottom: 5vh;
+  }
 }
 </style>

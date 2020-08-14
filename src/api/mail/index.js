@@ -23,7 +23,6 @@ export default class MailAPI {
    * @returns {Promise.<*>} - send email promise
    */
   send(email, name, body) {
-    console.log("email, name, body", email, name, body)
     return this.client.post("/sendEmail", {
       clientEmail: email,
       clientName: name,
