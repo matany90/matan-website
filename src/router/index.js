@@ -1,6 +1,7 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
 import landing from "../views/landing.vue"
+import contact from "../views/contact.vue"
 
 Vue.use(VueRouter)
 
@@ -9,6 +10,11 @@ const routes = [
     path: "/",
     name: "landing",
     component: landing
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    component: contact
   }
 ]
 

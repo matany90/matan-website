@@ -6,10 +6,18 @@ firebase.initializeApp()
 // init nodemailer
 const nodemailer = require("nodemailer")
 
+// cors
+require("cors")({ origin: true })
+
 /**
  * send custome email
  */
 exports.handler = async (req, res) => {
+  // set cors
+  res.set("Access-Control-Allow-Origin", "*")
+  res.set("Access-Control-Allow-Methods", "GET, PUT, POST, OPTIONS")
+  res.set("Access-Control-Allow-Headers", "*")
+
   // pull data
   const { clientEmail, clientName, subject, body } = req.body
 

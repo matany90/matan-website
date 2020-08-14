@@ -21,7 +21,12 @@
           >
             Get my CV
           </m-button>
-          <m-button class="matan-header--button" rounded color="primary">
+          <m-button
+            @click="pushToContactPage"
+            class="matan-header--button"
+            rounded
+            color="primary"
+          >
             Say Hello
           </m-button>
         </div>
@@ -46,6 +51,10 @@ export default {
 
     onMenuClick() {
       this.$emit("on-menu-press")
+    },
+
+    pushToContactPage() {
+      this.$router.push("/contact")
     }
   }
 }
