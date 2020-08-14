@@ -134,9 +134,13 @@ export default {
   }
 
   &--image {
-    width: 10vh;
-    top: 90px;
+    width: 12vh;
+    top: 70px;
     position: absolute;
+
+    @include media("<tablet") {
+      top: 85px;
+    }
   }
 
   &--title {
@@ -147,6 +151,11 @@ export default {
     margin-bottom: 2vh;
     font-size: $contact-page-title-size;
     font-weight: $contact-page-title-weight;
+    @include media("<tablet") {
+      margin-left: 15%;
+      margin-right: 15%;
+      margin-bottom: 4vh;
+    }
   }
 }
 
