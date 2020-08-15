@@ -83,8 +83,10 @@ export default {
 
       // send email
       try {
-        const res = await api.mail.send(this.email, this.name, this.body)
-        console.log("res", res)
+        await api.mail.send(this.email, this.name, this.body)
+
+        // redirect to success page
+        this.$router.push("/success")
       } catch (e) {
         console.error(e)
       }
