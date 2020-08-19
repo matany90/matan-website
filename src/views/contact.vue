@@ -88,7 +88,7 @@ export default {
         // redirect to success page
         this.$router.push("/success")
       } catch (e) {
-        console.error(e)
+        console.error("Error: ", e)
       }
 
       // close loading
