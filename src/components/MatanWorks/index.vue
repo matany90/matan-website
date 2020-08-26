@@ -89,7 +89,7 @@ export default {
     margin-top: 10vh;
 
     @include media("<tablet") {
-      margin-top: 60vh;
+      margin-top: 37vh;
     }
 
     position: relative;

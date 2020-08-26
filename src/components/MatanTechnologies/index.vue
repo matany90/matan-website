@@ -54,7 +54,8 @@ export default {
   }
 
   @include media("<tablet") {
-    margin-top: 360vh;
+    margin-top: 375vh;
+    margin-bottom: 15vh;
   }
 
   &--title {
@@ -83,6 +84,7 @@ export default {
         width: 150px;
         height: 70px;
         margin: 20px;
+        margin-bottom: 80px;
       }
     }
   }

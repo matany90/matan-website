@@ -128,11 +128,11 @@ export default {
   }
 
   &--logo {
-    width: 60%;
-    margin-bottom: -5%;
+    width: 40%;
+    margin-bottom: -10px;
     @include media("<tablet") {
-      width: 100%;
-      margin-bottom: -8%;
+      width: 80%;
+      margin-bottom: -2px;
     }
   }
 
