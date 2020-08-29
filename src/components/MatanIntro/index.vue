@@ -2,12 +2,12 @@
   <div class="matan-intro">
     <!-- Title -->
     <div class="matan-intro--title">
-      Experienced Full-Stack Developer & Software Engineer
+      {{ $t("landing.mainSection.title") }}
     </div>
 
     <!-- SubTitle -->
     <div class="matan-intro--subtitle">
-      I design and code beautifully simple things, and I love what I do.
+      {{ $t("landing.mainSection.subtitle") }}
     </div>
 
     <!-- Image logo -->

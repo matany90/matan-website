@@ -17,7 +17,7 @@
 
         <!-- Title  -->
         <div class="matan-footer--title">
-          Living, learning, & leveling up one day at a time.
+          {{ $t("landing.footer.title") }}
         </div>
       </template>
 

@@ -49,17 +49,17 @@ export default {
     return {
       cards: [
         {
-          title: "Front-end Developer",
+          title: this.$t("landing.cards.frontEnd.title"),
           icon: "code",
           intro: {
             lines: [
-              "Building user interfaces from scratch.",
-              "Using various state management like Redux, Vuex, Mobx.",
-              "Experience in building complex UI systems with huge scale of data."
+              this.$t("landing.cards.frontEnd.line1"),
+              this.$t("landing.cards.frontEnd.line2"),
+              this.$t("landing.cards.frontEnd.line3")
             ]
           },
           tools: {
-            title: "Front-end Frameworks and Tools:",
+            title: this.$t("landing.cards.frontEnd.tools.title"),
             lines: [
               "Vue.js",
               "React.js",
@@ -72,17 +72,17 @@ export default {
           }
         },
         {
-          title: "Back-end Developer",
+          title: this.$t("landing.cards.backEnd.title"),
           icon: "server",
           intro: {
             lines: [
-              "Experience in various server side architectures - Monolith and Microservices.",
-              "Integration with a rich variety of third-party API's",
-              "Use of relational and non-relational databases."
+              this.$t("landing.cards.backEnd.line1"),
+              this.$t("landing.cards.backEnd.line2"),
+              this.$t("landing.cards.backEnd.line3")
             ]
           },
           tools: {
-            title: "Back-end Tools and Frameworks:",
+            title: this.$t("landing.cards.backEnd.tools.title"),
             lines: [
               "Node.js",
               "Express",
@@ -98,16 +98,16 @@ export default {
           }
         },
         {
-          title: "Cloud Architecture",
+          title: this.$t("landing.cards.cloud.title"),
           icon: "cloud",
           intro: {
             lines: [
-              "Experience in GCP Cloud environment.",
-              "Infrastructure management on top of Docker and Kubernetes"
+              this.$t("landing.cards.cloud.line1"),
+              this.$t("landing.cards.cloud.line2")
             ]
           },
           tools: {
-            title: "Cloud Architecture Tools and Frameworks:",
+            title: this.$t("landing.cards.cloud.tools.title"),
             lines: [
               "Google Cloud",
               "Docker",

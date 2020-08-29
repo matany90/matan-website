@@ -2,7 +2,7 @@
   <div class="matan-technologies">
     <!-- Title -->
     <div class="matan-technologies--title">
-      I have experience with a variety of technologies:
+      {{ $t("landing.technologies.title") }}
     </div>
 
     <!-- Icons -->
@@ -47,7 +47,7 @@ export default {
   align-items: center;
   width: 100%;
   height: 60vh;
-  margin-top: 75vh;
+  margin-top: 85vh;
 
   @include media(">phone", "<desktop") {
     margin-top: 50vh;

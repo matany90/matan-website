@@ -4,17 +4,13 @@
     <matan-gradient-text class="overlay--gradient">
       <!-- Title -->
       <template v-slot:title>
-        <div>Take a look at my latest projects</div>
+        <div>{{ $t("landing.works.title") }}</div>
       </template>
 
       <!-- Body -->
       <template v-slot:body>
         <div>
-          is simply dummy text of the printing and typesetting industry. Lorem
-          Ipsum has been the industry's standard dummy text ever since the
-          1500s, when an unknown printer took a galley of type and scrambled it
-          to make a type specimen book. It has survived not only five centuries,
-          but also the leap into electronic typesetting, remaining.
+          {{ $t("landing.works.intro") }}
         </div>
       </template>
     </matan-gradient-text>
@@ -86,7 +82,7 @@ export default {
 .overlay {
   // define gradient overlay
   &--gradient {
-    margin-top: 10vh;
+    // margin-top: 0vh;
 
     @include media("<tablet") {
       margin-top: 37vh;
