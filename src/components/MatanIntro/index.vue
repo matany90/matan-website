@@ -14,12 +14,26 @@
     <div class="matan-intro--image-container">
       <img
         src="@/assets/images/matan-image.png"
+        @load="onImageLoaded"
         class="matan-intro--image-container--image"
       />
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  // define methods
+  methods: {
+    /**
+     * emit an event when image loaded.
+     */
+    onImageLoaded() {
+      this.$emit("on-image-loaded")
+    }
+  }
+}
+</script>
 <style lang="scss" scoped>
 @import "../../style/_main.scss";
 
