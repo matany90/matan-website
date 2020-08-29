@@ -46,7 +46,7 @@
 
 <script>
 // timeout interval
-const TIMEOUT_INTERVAL = 2000
+const TIMEOUT_INTERVAL = 1500
 
 export default {
   // local state
@@ -70,7 +70,7 @@ export default {
      * On image loaded
      */
     onImageLoaded() {
-      // set loading spinner for 2 secs
+      // set loading spinner for 1.5 secs
       setTimeout(() => {
         this.isLoading = false
       }, TIMEOUT_INTERVAL)
