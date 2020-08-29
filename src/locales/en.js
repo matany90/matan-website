@@ -50,5 +50,16 @@ export const en = {
     footer: {
       title: "Living, learning, & leveling up one day at a time."
     }
+  },
+  contact: {
+    title: "Thanks for taking the time to reach out. How can I help you today?",
+    email: "Email",
+    name: "Name",
+    message: "Message"
+  },
+  buttons: {
+    sayHello: "Say Hello",
+    getCV: "Get My CV",
+    submit: "Submit"
   }
 }

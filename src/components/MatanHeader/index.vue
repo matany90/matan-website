@@ -23,7 +23,7 @@
             color="primary"
             @click="onCbButtonClick"
           >
-            Get my CV
+            {{ $t("buttons.getCV") }}
           </m-button>
           <m-button
             @click="pushToContactPage"
@@ -31,7 +31,7 @@
             rounded
             color="primary"
           >
-            Say Hello
+            {{ $t("buttons.sayHello") }}
           </m-button>
         </div>
         <m-icon

@@ -12,18 +12,26 @@
 
     <!-- Title -->
     <div class="main-logo--title">
-      Thanks for taking the time to reach out. How can I help you today?
+      {{ $t("contact.title") }}
     </div>
 
     <!-- Form -->
     <div class="matan-form">
-      <m-text-field v-model="name" label="Name" class="matan-form--input" />
-      <m-text-field v-model="email" label="Email" class="matan-form--input" />
+      <m-text-field
+        v-model="name"
+        :label="$t('contact.name')"
+        class="matan-form--input"
+      />
+      <m-text-field
+        v-model="email"
+        :label="$t('contact.email')"
+        class="matan-form--input"
+      />
     </div>
     <div class="matan-form">
       <m-text-field
         v-model="body"
-        label="Message"
+        :label="$t('contact.message')"
         class="matan-form--input--message"
         fullBox
       />
@@ -38,7 +46,7 @@
         :loading="loading"
         :disabled="isDisable"
       >
-        Submit
+        {{ $t("buttons.submit") }}
       </m-button>
     </div>
   </div>
