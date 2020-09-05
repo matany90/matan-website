@@ -28,12 +28,51 @@
             <m-flip-card class="matan-flip-cards--card">
               <!-- Front card -->
               <template v-slot:front>
-                <div>test FRONT</div>
+                <div
+                  :class="
+                    `matan-flip-cards--card--front-${card.name}-background`
+                  "
+                >
+                  <m-icon
+                    v-if="card.icon"
+                    :name="card.icon"
+                    style="width: 80px; margin-right: 3px;"
+                  />
+                  <div
+                    :class="`matan-flip-cards--card--front-${card.name}-title`"
+                  >
+                    {{ card.front.title }}
+                  </div>
+                </div>
               </template>
 
               <!-- Back card -->
               <template v-slot:back>
-                <div>test Back</div>
+                <div
+                  :class="
+                    `matan-flip-cards--card--back-${card.name}-background`
+                  "
+                >
+                  <div
+                    :class="`matan-flip-cards--card--back-${card.name}-title`"
+                  >
+                    {{ card.back.title }}
+                  </div>
+
+                  <!-- Back Buttons -->
+                  <div class="matan-flip-cards--card--back-buttons">
+                    <m-button
+                      class="matan-flip-cards--card--back-buttons--button"
+                    >
+                      Source Code
+                    </m-button>
+                    <m-button
+                      class="matan-flip-cards--card--back-buttons--button"
+                    >
+                      Website
+                    </m-button>
+                  </div>
+                </div>
               </template>
             </m-flip-card>
           </div>
@@ -51,24 +90,64 @@ export default {
       worksCards: [
         [
           {
-            title: "card1"
+            name: "chat",
+            icon: "chat",
+            front: {
+              title: "Matan's Chat"
+            },
+            back: {
+              title: "For source code and website:"
+            }
           },
           {
-            title: "card2"
+            name: "tvshows",
+            front: {
+              title: "TV Shows"
+            },
+            back: {
+              title: "For source code and website:"
+            }
           },
           {
-            title: "card3"
+            name: "mylocations",
+            icon: "mylocations",
+            front: {
+              title: "My Locations"
+            },
+            back: {
+              title: "For source code and website:"
+            }
           }
         ],
         [
           {
-            title: "card4"
+            name: "usermanagement",
+            icon: "usermanagement.png",
+            front: {
+              title: "User Management"
+            },
+            back: {
+              title: "For source code and website:"
+            }
           },
           {
-            title: "card5"
+            name: "betmasters",
+            front: {
+              title: ""
+            },
+            back: {
+              title: "For source code and website:"
+            }
           },
           {
-            title: "card6"
+            name: "matanwebsite",
+            icon: "matan-image.png",
+            front: {
+              title: "Matan's Website"
+            },
+            back: {
+              title: "For source code and website:"
+            }
           }
         ]
       ]
@@ -112,7 +191,7 @@ export default {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 350vh;
+    top: 370vh;
 
     @include media("<tablet") {
       flex-direction: column;
@@ -123,6 +202,173 @@ export default {
   // card
   &--card {
     margin: 10px;
+
+    // Matan's Website
+    &--front-matanwebsite-background {
+      background: linear-gradient(
+        to bottom left,
+        map-deep-get($matan-colors, "primary"),
+        map-deep-get($matan-colors, "secondary")
+      );
+      @include flipcard-front-background;
+      flex-direction: column;
+    }
+
+    &--front-matanwebsite-title {
+      font-family: "Alfa Slab One", cursive;
+      font-size: 25px;
+      color: white;
+      margin-top: 10px;
+    }
+
+    &--back-matanwebsite-background {
+      background: map-deep-get($matan-colors, "tertiary");
+      @include flipcard-back-background;
+    }
+
+    &--back-matanwebsite-title {
+      font-family: $card-title-font-family;
+      font-size: 25px;
+      margin-left: 40px;
+      margin-right: 40px;
+      color: white;
+    }
+
+    // Bet Masters
+    &--front-betmasters-background {
+      background-image: url("../../assets/images/betmasters-background.png");
+      @include flipcard-front-background;
+    }
+
+    &--back-betmasters-background {
+      background: map-deep-get($matan-colors, "tertiary");
+      @include flipcard-back-background;
+    }
+
+    &--back-betmasters-title {
+      font-family: $card-title-font-family;
+      font-size: 25px;
+      margin-left: 40px;
+      margin-right: 40px;
+      color: white;
+    }
+
+    // User management
+    &--front-usermanagement-background {
+      background: linear-gradient(to bottom right, #4db6ac, #00897b);
+      @include flipcard-front-background;
+    }
+
+    &--front-usermanagement-title {
+      font-family: "Alfa Slab One", cursive;
+      font-size: 25px;
+      color: white;
+    }
+
+    &--back-usermanagement-background {
+      background: map-deep-get($matan-colors, "tertiary");
+      @include flipcard-back-background;
+    }
+
+    &--back-usermanagement-title {
+      font-family: $card-title-font-family;
+      font-size: 25px;
+      margin-left: 40px;
+      margin-right: 40px;
+      color: white;
+    }
+
+    // My locations
+    &--front-mylocations-background {
+      background-image: url("../../assets/images/mylocations-background.png");
+      @include flipcard-front-background;
+    }
+
+    &--front-mylocations-title {
+      font-family: "Rubik", sans-serif;
+      font-size: 35px;
+      text-shadow: 1px 1px map-deep-get($matan-colors, "grey", "purple");
+      color: white;
+    }
+
+    &--back-mylocations-background {
+      background: map-deep-get($matan-colors, "tertiary");
+      @include flipcard-back-background;
+    }
+
+    &--back-mylocations-title {
+      font-family: $card-title-font-family;
+      font-size: 25px;
+      margin-left: 40px;
+      margin-right: 40px;
+      color: white;
+    }
+
+    // Tv Shows
+    &--front-tvshows-background {
+      background-image: url("../../assets/images/tvshows-background.png");
+      border: 2px solid map-deep-get($matan-colors, "primary");
+      @include flipcard-front-background;
+    }
+
+    &--front-tvshows-title {
+      font-family: "Fugaz One", cursive;
+      font-size: 35px;
+      text-shadow: 2px 2px map-deep-get($matan-colors, "grey", "purple");
+      color: map-deep-get($matan-colors, "primary");
+    }
+
+    &--back-tvshows-background {
+      background: map-deep-get($matan-colors, "tertiary");
+      @include flipcard-back-background;
+    }
+
+    &--back-tvshows-title {
+      font-family: $card-title-font-family;
+      font-size: 25px;
+      margin-left: 40px;
+      margin-right: 40px;
+      color: white;
+    }
+
+    // Chat app
+    &--front-chat-background {
+      background-image: url("../../assets/images/chat-app-background.png");
+      @include flipcard-front-background;
+    }
+
+    &--front-chat-title {
+      font-family: $card-title-font-family;
+      font-size: 35px;
+      margin: 10px;
+      text-shadow: 2px 2px map-deep-get($matan-colors, "grey", "purple");
+      color: white;
+    }
+
+    &--back-chat-background {
+      background: map-deep-get($matan-colors, "tertiary");
+      @include flipcard-back-background;
+    }
+
+    &--back-chat-title {
+      font-family: $card-title-font-family;
+      font-size: 25px;
+      margin-left: 40px;
+      margin-right: 40px;
+      color: white;
+    }
+
+    &--back-buttons {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+
+      &--button {
+        border-radius: 30px;
+        width: 160px;
+        color: white;
+      }
+    }
   }
 }
 </style>

@@ -40,3 +40,26 @@
   -moz-box-shadow: $shadow;
   box-shadow: $shadow;
 }
+
+@mixin flipcard-front-background {
+  height: 100%;
+  border-radius: 15px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+@mixin flipcard-back-background {
+  height: 100%;
+  border-radius: 15px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
+}

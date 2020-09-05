@@ -17,8 +17,8 @@
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
-  width: 300px;
-  height: 200px;
+  width: 350px;
+  height: 250px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -59,7 +59,7 @@
   // design
   background: white;
   border-radius: $card-border-radius;
-  border: 1px solid map-deep-get($matan-colors, "grey", "light");
+  // border: 1px solid map-deep-get($matan-colors, "grey", "light");
 
   @include shadow(2px 2px 6px 2px rgba(0, 0, 0, 0.1));
 }
