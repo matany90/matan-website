@@ -45,12 +45,13 @@
 </template>
 
 <script>
+import { cvLink } from "../../configs"
+
 export default {
   // methods
   methods: {
     onCbButtonClick() {
-      window.location.href =
-        "https://srv-file10.gofile.io/download/0sZIg1/CV.pdf"
+      window.location.href = cvLink
     },
 
     onMenuClick() {

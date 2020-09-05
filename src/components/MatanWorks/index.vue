@@ -62,11 +62,14 @@
                   <!-- Back Buttons -->
                   <div class="matan-flip-cards--card--back-buttons">
                     <m-button
+                      @click="onSourceClick(card.back.source)"
                       class="matan-flip-cards--card--back-buttons--button"
                     >
                       Source Code
                     </m-button>
                     <m-button
+                      v-if="card.back.website"
+                      @click="onWebsiteClick(card.back.website)"
                       class="matan-flip-cards--card--back-buttons--button"
                     >
                       Website
@@ -91,12 +94,13 @@ export default {
         [
           {
             name: "chat",
-            icon: "chat",
             front: {
               title: "Matan's Chat"
             },
             back: {
-              title: "For source code and website:"
+              title: "For source code and website:",
+              source: "https://github.com/matany90/Chat-App",
+              website: "https://chat-app-client-matan.herokuapp.com/"
             }
           },
           {
@@ -105,7 +109,8 @@ export default {
               title: "TV Shows"
             },
             back: {
-              title: "For source code and website:"
+              title: "For source code and website:",
+              source: "https://github.com/matany90/Tv-Shows"
             }
           },
           {
@@ -115,7 +120,9 @@ export default {
               title: "My Locations"
             },
             back: {
-              title: "For source code and website:"
+              title: "For source code and website:",
+              source: "https://github.com/matany90/My-Locations",
+              website: "https://my-locations-app-matan-client.herokuapp.com/"
             }
           }
         ],
@@ -127,7 +134,9 @@ export default {
               title: "User Management"
             },
             back: {
-              title: "For source code and website:"
+              title: "For source code and website:",
+              source: "https://github.com/matany90/User-management",
+              website: "https://rele-ai-project-matan.herokuapp.com/"
             }
           },
           {
@@ -136,7 +145,8 @@ export default {
               title: ""
             },
             back: {
-              title: "For source code and website:"
+              title: "For source code and website:",
+              source: "https://github.com/matany90/BetMasters"
             }
           },
           {
@@ -146,11 +156,30 @@ export default {
               title: "Matan's Website"
             },
             back: {
-              title: "For source code and website:"
+              title: "For source code and website:",
+              source: "https://github.com/matany90/matan-website",
+              website: "https://matan-website.firebaseapp.com/"
             }
           }
         ]
       ]
+    }
+  },
+
+  // methods
+  methods: {
+    /**
+     * On source click
+     */
+    onSourceClick(sourceLink) {
+      window.open(sourceLink, "_blank")
+    },
+
+    /**
+     * On website click
+     */
+    onWebsiteClick(websiteLink) {
+      window.open(websiteLink, "_blank")
     }
   }
 }
@@ -215,7 +244,7 @@ export default {
     }
 
     &--front-matanwebsite-title {
-      font-family: "Alfa Slab One", cursive;
+      font-family: "Josefin Sans", sans-serif;
       font-size: 25px;
       color: white;
       margin-top: 10px;
@@ -339,8 +368,8 @@ export default {
 
     &--front-chat-title {
       font-family: $card-title-font-family;
-      font-size: 35px;
-      margin: 10px;
+      font-size: 28px;
+      margin-left: 145px;
       text-shadow: 2px 2px map-deep-get($matan-colors, "grey", "purple");
       color: white;
     }
