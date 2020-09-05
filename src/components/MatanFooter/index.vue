@@ -43,6 +43,14 @@
 </template>
 
 <script>
+import {
+  facebookLink,
+  linkedinLink,
+  githubLink,
+  cvLink,
+  mailLink
+} from "../../configs"
+
 export default {
   // local state
   data() {
@@ -51,23 +59,23 @@ export default {
       buttonIcons: [
         {
           name: "facebook",
-          link: "https://www.facebook.com/matan.yechiel"
+          link: facebookLink
         },
         {
           name: "linkedin",
-          link: "https://www.linkedin.com/in/matan-yechiel-62117818b/"
+          link: linkedinLink
         },
         {
           name: "cv",
-          link: "https://srv-file10.gofile.io/download/0sZIg1/CV.pdf"
+          link: cvLink
         },
         {
           name: "github",
-          link: "https://github.com/matany90"
+          link: githubLink
         },
         {
           name: "mail",
-          link: "mailto:matany90@gmail.com"
+          link: mailLink
         }
       ]
     }

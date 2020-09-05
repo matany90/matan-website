@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import { cvLink } from "../../../configs"
+
 export default {
   // methods
   methods: {
@@ -23,8 +25,7 @@ export default {
      * Download cv
      */
     downloadCV() {
-      window.location.href =
-        "https://srv-file10.gofile.io/download/0sZIg1/CV.pdf"
+      window.location.href = cvLink
     },
 
     /**
