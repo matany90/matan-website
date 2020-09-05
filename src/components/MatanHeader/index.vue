@@ -83,6 +83,11 @@ export default {
       width: 50px;
       height: 60px;
       cursor: pointer;
+
+      @include media("<tablet") {
+        width: 35px;
+        height: 40px;
+      }
     }
   }
 
@@ -113,8 +118,8 @@ export default {
   }
 
   &--menu {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     margin-right: 3vh;
     @include media(">=tablet") {
       display: none;

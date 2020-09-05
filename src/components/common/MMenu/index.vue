@@ -3,8 +3,21 @@
     <div class="m-menu--item m-menu--closebtn" @click="onMenuClick">
       &times;
     </div>
-    <div class="m-menu--item" @click="pushToContact">Say Hello</div>
-    <div class="m-menu--item" @click="downloadCV">Get my CV</div>
+    <hr class="divider" />
+    <div class="m-menu--item" @click="pushToContact">
+      <m-icon name="mail" style="width: 3vh;" />
+      <div class="m-menu--item--text">
+        {{ $t("buttons.sayHello") }}
+      </div>
+    </div>
+    <hr class="divider" />
+    <div class="m-menu--item" @click="downloadCV">
+      <m-icon name="cv" style="width: 3vh;" />
+      <div class="m-menu--item--text">
+        {{ $t("buttons.getCV") }}
+      </div>
+    </div>
+    <hr class="divider" />
   </div>
 </template>
 
@@ -56,16 +69,24 @@ export default {
   transition: 0.5s;
 
   &--item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4px;
+    margin-top: 4px;
     padding: 8px 8px 8px 32px;
+    // padding: 5px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: map-deep-get($matan-colors, "primary");
-    display: block;
     transition: 0.3s;
 
     &:hover {
       color: map-deep-get($matan-colors, "secondary");
       cursor: pointer;
+    }
+
+    &--text {
+      margin-left: 20px;
     }
   }
 
@@ -92,5 +113,9 @@ export default {
   .m-menu div {
     font-size: 18px;
   }
+}
+
+.divider {
+  border-top: 1px map-deep-get($matan-colors, "grey", "light");
 }
 </style>
