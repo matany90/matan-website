@@ -46,16 +46,16 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 60vh;
   margin-top: 85vh;
+  margin-bottom: 10vh;
 
   @include media(">phone", "<desktop") {
     margin-top: 50vh;
   }
 
   @include media("<tablet") {
-    margin-top: 375vh;
-    margin-bottom: 15vh;
+    margin-top: 120rem;
+    margin-bottom: 0vh;
   }
 
   &--title {

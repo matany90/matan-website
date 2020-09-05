@@ -84,9 +84,9 @@ export default {
   &--gradient {
     // margin-top: 0vh;
 
-    @include media("<tablet") {
-      margin-top: 37vh;
-    }
+    // @include media("<tablet") {
+    //   margin-top: 37vh;
+    // }
 
     position: relative;
   }
@@ -116,7 +116,7 @@ export default {
 
     @include media("<tablet") {
       flex-direction: column;
-      top: 760vh;
+      top: 320rem;
     }
   }
 

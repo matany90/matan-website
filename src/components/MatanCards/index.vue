@@ -147,6 +147,10 @@ export default {
 
   &--card {
     margin: 5px;
+
+    @include media("<=tablet") {
+      height: 40rem;
+    }
   }
 
   &--title {
