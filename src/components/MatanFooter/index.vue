@@ -121,7 +121,7 @@ export default {
   }
 
   @include media("<tablet") {
-    margin-top: 250vh;
+    margin-top: 220vh;
   }
 
   &--img {

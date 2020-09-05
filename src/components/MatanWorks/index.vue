@@ -65,14 +65,22 @@
                       @click="onSourceClick(card.back.source)"
                       class="matan-flip-cards--card--back-buttons--button"
                     >
-                      Source Code
+                      <m-icon
+                        name="sourcecode"
+                        style="width: 20px; margin-right: 10px; margin-top: 4px;"
+                      />
+                      <div>Source Code</div>
                     </m-button>
                     <m-button
                       v-if="card.back.website"
                       @click="onWebsiteClick(card.back.website)"
                       class="matan-flip-cards--card--back-buttons--button"
                     >
-                      Website
+                      <m-icon
+                        name="website"
+                        style="width: 20px; margin-right: 10px"
+                      />
+                      <div>Website</div>
                     </m-button>
                   </div>
                 </div>
@@ -220,7 +228,7 @@ export default {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 370vh;
+    top: 355vh;
 
     @include media("<tablet") {
       flex-direction: column;
@@ -394,8 +402,12 @@ export default {
 
       &--button {
         border-radius: 30px;
-        width: 160px;
+        width: 180px;
         color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
