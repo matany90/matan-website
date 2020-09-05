@@ -1,6 +1,7 @@
 // english tranlations
 export const en = {
   landing: {
+    loading: "You'll be there in a moment...",
     mainSection: {
       title: "Experienced Full-Stack Developer & Software Engineer",
       subtitle:
