@@ -69,7 +69,7 @@
                         name="sourcecode"
                         style="width: 20px; margin-right: 10px; margin-top: 4px;"
                       />
-                      <div>Source Code</div>
+                      <div>{{ $t("buttons.sourceCode") }}</div>
                     </m-button>
                     <m-button
                       v-if="card.back.website"
@@ -80,7 +80,7 @@
                         name="website"
                         style="width: 20px; margin-right: 10px"
                       />
-                      <div>Website</div>
+                      <div>{{ $t("buttons.website") }}</div>
                     </m-button>
                   </div>
                 </div>

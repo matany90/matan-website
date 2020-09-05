@@ -61,6 +61,8 @@ export const en = {
   buttons: {
     sayHello: "Say Hello",
     getCV: "Get My CV",
-    submit: "Submit"
+    submit: "Submit",
+    sourceCode: "Source Code",
+    website: "Website"
   }
 }
