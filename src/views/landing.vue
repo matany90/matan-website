@@ -1,15 +1,17 @@
 <template>
   <m-container>
-    <div v-if="isLoading" class="loading-spinner">
+    <div v-if="isLogoLoading" class="loading-spinner">
       <div class="loading-spinner--container">
         <img class="loading-spinner--img" src="@/assets/icons/rings.svg" />
         <div>{{ $t("landing.loading") }}</div>
       </div>
     </div>
-    <div v-show="!isLoading">
+    <div v-show="!isLogoLoading">
       <!-- Header -->
       <matan-header @on-menu-press="toggleMenu" />
-      <m-menu v-if="isMenuOpen" @on-menu-press="toggleMenu" />
+      <transition name="expand">
+        <m-menu v-if="isMenuOpen" @on-menu-press="toggleMenu" />
+      </transition>
 
       <!-- Intro -->
       <matan-intro @on-image-loaded="onImageLoaded" />
@@ -36,7 +38,10 @@
       <matan-technologies />
 
       <!-- Recent work -->
-      <matan-works />
+      <matan-works
+        :loadedImages="worksImagesLoaded"
+        @on-image-loaded="onWorkImageLoaded"
+      />
 
       <!-- Recommnedations -->
       <!-- <matan-recommendation /> -->
@@ -51,12 +56,31 @@
 // timeout interval
 const TIMEOUT_INTERVAL = 1500
 
+// number of works cards
+const WORK_CARDS = 6
+
 export default {
   // local state
   data() {
     return {
+      // is menu open (mobile only)
       isMenuOpen: false,
-      isLoading: true
+
+      // is loading spinner active
+      isLogoLoading: true,
+
+      // is work cards loading
+      isWorkCardsLoaded: true,
+
+      // works images loading
+      worksImagesLoaded: []
+    }
+  },
+
+  // computed propeties
+  computed: {
+    isLoading() {
+      return this.isLogoLoading || this.isWorkCardsLoaded
     }
   },
 
@@ -75,8 +99,19 @@ export default {
     onImageLoaded() {
       // set loading spinner for 1.5 secs
       setTimeout(() => {
-        this.isLoading = false
+        this.isLogoLoading = false
       }, TIMEOUT_INTERVAL)
+    },
+
+    /**
+     * On work card image loaded
+     */
+    onWorkImageLoaded(isLoaded) {
+      this.worksImagesLoaded.push(isLoaded)
+
+      if (this.worksImagesLoaded.length === WORK_CARDS) {
+        this.isWorkCardsLoaded = false
+      }
     }
   }
 }
@@ -121,5 +156,22 @@ export default {
       top: 185vh;
     }
   }
+}
+
+/* always present */
+.expand-transition {
+  transition: all 0.3s ease;
+  height: 30px;
+  padding: 10px;
+  background-color: #eee;
+  overflow: hidden;
+}
+/* .expand-enter defines the starting state for entering */
+/* .expand-leave defines the ending state for leaving */
+.expand-enter,
+.expand-leave {
+  height: 0;
+  padding: 0 10px;
+  opacity: 0;
 }
 </style>
