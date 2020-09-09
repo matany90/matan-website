@@ -317,7 +317,7 @@ export default {
 
     // My locations
     &--front-mylocations-background {
-      background-image: url("../../assets/images/mylocations-background.png");
+      background-image: url("../../assets/images/mylocations-background.jpg");
       @include flipcard-front-background;
     }
 
@@ -343,7 +343,7 @@ export default {
 
     // Tv Shows
     &--front-tvshows-background {
-      background-image: url("../../assets/images/tvshows-background.png");
+      background-image: url("../../assets/images/tvshows-background.jpg");
       border: 2px solid map-deep-get($matan-colors, "primary");
       @include flipcard-front-background;
     }
@@ -370,7 +370,7 @@ export default {
 
     // Chat app
     &--front-chat-background {
-      background-image: url("../../assets/images/chat-app-background.png");
+      background-image: url("../../assets/images/chat-app-background.jpg");
       @include flipcard-front-background;
     }
 
