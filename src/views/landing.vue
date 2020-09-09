@@ -151,16 +151,6 @@ export default {
   // define gradient overlay
   &--gradient {
     position: relative;
-    // @include media("<tablet") {
-    //   height: 150vh;
-    // }
-
-    &--text {
-      @include media(">=tablet") {
-        margin-left: 15vh;
-        margin-right: 15vh;
-      }
-    }
   }
 
   // define cards overlay
