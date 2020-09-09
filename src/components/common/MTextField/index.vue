@@ -17,7 +17,7 @@
       <r-icon v-if="icon" :icon="icon" />
     </div>
 
-    <div style="height: 1vh;">
+    <div class="m-text-field--error-container">
       <label v-show="validation && !isInputVaid" :class="labelClasses">
         {{ $t(`errors.validate${capitalizeFirstLetter(validation)}`) }}
       </label>
@@ -279,6 +279,13 @@ export default {
   &--label-error {
     color: red;
     font-size: $text-field-error-size;
+  }
+
+  &--error-container {
+    height: 1vh;
+    @include media("<tablet") {
+      height: 2vh;
+    }
   }
 }
 </style>
