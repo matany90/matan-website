@@ -4,13 +4,12 @@ export const en = {
     loading: "You'll be there in a moment...",
     mainSection: {
       title: "Experienced Full-Stack Developer & Software Engineer",
-      subtitle:
-        "I design and code beautifully simple things, and I love what I do."
+      subtitle: "I write code for a living, and I'm just love what I'm doing."
     },
     cards: {
       title: "Hi, I'm Matan",
       intro:
-        "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining.",
+        "For the past three years I have been working as a software developer, both independently and during my work. <br /> I have rich experience with a variety of programming languages ​​and frameworks, development E2E features from scratch on both server side and client side, and working in cloud environment on-top of Docker and Kubernetes. <br />My belief is that in order to be good at what you do - you must love what you do.",
       frontEnd: {
         title: "Front-end Developer",
         line1: "Building user interfaces from scratch.",
@@ -46,7 +45,7 @@ export const en = {
     works: {
       title: "Take a look at my latest projects",
       intro:
-        "is simply dummy text of the printing and typesetting industry. LoremIpsum has been the industry's standard dummy text ever since the1500s, when an unknown printer took a galley of type and scrambled itto make a type specimen book. It has survived not only five centuries,but also the leap into electronic typesetting, remaining."
+        "You are more than welcome to take a look at my latest work. <br /> You will find here mobile applications, web applications and many other good stuff... <br /> All the other projects beyond those shown here, you can find in my Github account."
     },
     footer: {
       title: "Living, learning, & leveling up one day at a time."

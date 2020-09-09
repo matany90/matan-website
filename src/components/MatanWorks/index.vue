@@ -9,9 +9,10 @@
 
       <!-- Body -->
       <template v-slot:body>
-        <div>
-          {{ $t("landing.works.intro") }}
-        </div>
+        <div
+          v-html="$t('landing.works.intro')"
+          class="overlay--gradient--text"
+        />
       </template>
     </matan-gradient-text>
 
@@ -198,13 +199,14 @@ export default {
 .overlay {
   // define gradient overlay
   &--gradient {
-    // margin-top: 0vh;
-
-    // @include media("<tablet") {
-    //   margin-top: 37vh;
-    // }
-
     position: relative;
+
+    &--text {
+      @include media(">=tablet") {
+        margin-left: 15vh;
+        margin-left: 15vh;
+      }
+    }
   }
 }
 
@@ -228,8 +230,19 @@ export default {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 355vh;
+    top: 360vh;
 
+    // cards heigth medium screen
+    @media screen and (min-height: 900px) {
+      top: 360vh;
+    }
+
+    // card height large screen
+    @media screen and (min-height: 1000px) {
+      top: 340vh;
+    }
+
+    // card heigth mobile
     @include media("<tablet") {
       flex-direction: column;
       top: 320rem;

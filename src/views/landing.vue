@@ -26,9 +26,10 @@
 
         <!-- Body -->
         <template v-slot:body>
-          <div>
-            {{ $t("landing.cards.intro") }}
-          </div>
+          <div
+            class="overlay--gradient--text"
+            v-html="$t('landing.cards.intro')"
+          />
         </template>
       </matan-gradient-text>
 
@@ -150,6 +151,16 @@ export default {
   // define gradient overlay
   &--gradient {
     position: relative;
+    // @include media("<tablet") {
+    //   height: 150vh;
+    // }
+
+    &--text {
+      @include media(">=tablet") {
+        margin-left: 15vh;
+        margin-right: 15vh;
+      }
+    }
   }
 
   // define cards overlay
