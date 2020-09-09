@@ -24,6 +24,7 @@
       />
       <m-text-field
         v-model="email"
+        validation="email"
         :label="$t('contact.email')"
         class="matan-form--input"
       />

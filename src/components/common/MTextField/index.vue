@@ -16,18 +16,20 @@
 
       <r-icon v-if="icon" :icon="icon" />
     </div>
+
+    <div style="height: 1vh;">
+      <label v-show="validation && !isInputVaid" :class="labelClasses">
+        {{ $t(`errors.validate${capitalizeFirstLetter(validation)}`) }}
+      </label>
+    </div>
   </div>
 </template>
 
 <script>
-/* eslint-disable */
-// format pattern
-const formats = {
-  email: [
-    v => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v)
-  ]
-}
-/* eslint-enable */
+import { toUpper, validateEmail } from "../../../utils"
+
+// Interval timeout
+const INTERVAL_TIMEOUT = 1000
 
 /**
  * Define the input text field
@@ -35,6 +37,17 @@ const formats = {
 export default {
   // set the component name
   name: "m-text-field",
+
+  // local state
+  data() {
+    return {
+      // is input valid
+      isInputVaid: true,
+
+      // typing timer
+      timer: null
+    }
+  },
 
   // external props
   props: {
@@ -75,10 +88,9 @@ export default {
     },
 
     // format of the input
-    format: {
+    validation: {
       type: String,
-      default: "",
-      enum: ["email"]
+      default: ""
     },
 
     // pattern for the input validation
@@ -123,7 +135,18 @@ export default {
      * Get input class list
      */
     classInputList() {
-      return ["m-text-field--input", this.fullBox ? "m-text-field--box" : ""]
+      return [
+        "m-text-field--input",
+        this.fullBox ? "m-text-field--box" : "",
+        this.isInputVaid ? "" : "m-text-field--error"
+      ]
+    },
+
+    /**
+     * Label classes
+     */
+    labelClasses() {
+      return [this.isInputVaid ? "" : "m-text-field--label-error"]
     },
 
     /**
@@ -145,7 +168,9 @@ export default {
           const { value } = e.target
 
           // handle validation
-          vm.handleValidation(value)
+          if (vm.validation) {
+            vm.validateInput(value)
+          }
 
           // emit value
           vm.$emit("input", value)
@@ -157,20 +182,42 @@ export default {
   // component functions
   methods: {
     /**
-     * Handle validation on input
+     * Validate email input
      */
-    handleValidation(value) {
-      let status = false
+    validateInput(value) {
+      console.log("valueee", value)
+      this.timer = null
+      this.timer = setTimeout(() => {
+        this.isInputVaid = this.validate(value)
+        if (value === "") this.isInputVaid = true
+      }, INTERVAL_TIMEOUT)
+    },
 
-      if (this.format) {
-        // check validation by format
-        status = formats[this.format].every(cb => cb(value))
-      } else if (this.pattern) {
-        // check validation by pattern
-        status = this.pattern.test(value)
+    /**
+     * Validate values
+     */
+    validate(value) {
+      // validation
+      switch (this.validation) {
+        case "email":
+          return validateEmail(value)
+        default:
+          return true
       }
+    },
 
-      this.$emit("validation", status)
+    /**
+     * capitalize First Letter
+     */
+    capitalizeFirstLetter(value) {
+      return toUpper(value)
+    },
+
+    /**
+     * On close
+     */
+    onCloseDialog() {
+      this.isInputVaid = true
     }
   }
 }
@@ -222,6 +269,16 @@ export default {
 
   &--box {
     padding-bottom: 150px;
+  }
+
+  &--error {
+    border: 1px solid red;
+    border-radius: $border-radius;
+  }
+
+  &--label-error {
+    color: red;
+    font-size: $text-field-error-size;
   }
 }
 </style>

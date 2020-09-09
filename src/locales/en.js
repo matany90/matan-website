@@ -64,5 +64,8 @@ export const en = {
     submit: "Submit",
     sourceCode: "Source Code",
     website: "Website"
+  },
+  errors: {
+    validateEmail: "Email Address is not valid."
   }
 }
