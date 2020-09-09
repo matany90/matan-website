@@ -1,9 +1,10 @@
 <template>
   <m-container>
+    <!-- Loading spinner -->
     <div v-if="isLogoLoading" class="loading-spinner">
       <div class="loading-spinner--container">
         <img class="loading-spinner--img" src="@/assets/icons/rings.svg" />
-        <div>{{ $t("landing.loading") }}</div>
+        <div class="loading-spinner--text">{{ $t("landing.loading") }}</div>
       </div>
     </div>
     <div v-show="!isLogoLoading">
@@ -137,6 +138,11 @@ export default {
     font-size: $section-title-font-size;
     color: map-deep-get($matan-colors, "grey", "middle");
     margin-bottom: 10vh;
+  }
+
+  &--text {
+    margin-left: 10vh;
+    margin-right: 10vh;
   }
 }
 
