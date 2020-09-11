@@ -160,7 +160,7 @@ export default {
     top: 130vh;
 
     @include media("<=tablet") {
-      top: 185vh;
+      top: 190vh;
     }
   }
 }

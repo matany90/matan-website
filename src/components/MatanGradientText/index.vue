@@ -29,10 +29,10 @@
     map-deep-get($matan-colors, "secondary")
   );
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  -webkit-clip-path: polygon(0 5%, 100% 0, 100% 90%, 0 100%);
 
   @include media("<tablet") {
-    height: 90vh;
+    height: 100vh;
   }
 
   &--title {

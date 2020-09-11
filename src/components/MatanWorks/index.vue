@@ -204,7 +204,7 @@ export default {
     &--text {
       @include media(">=tablet") {
         margin-left: 15vh;
-        margin-left: 15vh;
+        margin-right: 15vh;
       }
     }
   }
@@ -245,7 +245,7 @@ export default {
     // card heigth mobile
     @include media("<tablet") {
       flex-direction: column;
-      top: 320rem;
+      top: 327rem;
     }
   }
 
