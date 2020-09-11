@@ -49,14 +49,8 @@
 
               <!-- Back card -->
               <template v-slot:back>
-                <div
-                  :class="
-                    `matan-flip-cards--card--back-${card.name}-background`
-                  "
-                >
-                  <div
-                    :class="`matan-flip-cards--card--back-${card.name}-title`"
-                  >
+                <div class="matan-flip-cards--card--back--background">
+                  <div class="matan-flip-cards--card--back--title">
                     {{ card.back.title }}
                   </div>
 
@@ -107,7 +101,8 @@ export default {
               title: "Matan's Chat"
             },
             back: {
-              title: "For source code and website:",
+              title:
+                "A Chat-messaging Web-application that allows users to open private rooms.",
               source: "https://github.com/matany90/Chat-App",
               website: "https://chat-app-client-matan.herokuapp.com/"
             }
@@ -118,7 +113,8 @@ export default {
               title: "TV Shows"
             },
             back: {
-              title: "For source code and website:",
+              title:
+                "Cross-Platform Mobile App that presents information about TV shows around the world.",
               source: "https://github.com/matany90/Tv-Shows"
             }
           },
@@ -129,7 +125,8 @@ export default {
               title: "My Locations"
             },
             back: {
-              title: "For source code and website:",
+              title:
+                "Web Application that helps you save your favorite categories and locations.",
               source: "https://github.com/matany90/My-Locations",
               website: "https://my-locations-app-matan-client.herokuapp.com/"
             }
@@ -143,7 +140,7 @@ export default {
               title: "User Management"
             },
             back: {
-              title: "For source code and website:",
+              title: "User's management Web Application.",
               source: "https://github.com/matany90/User-management",
               website: "https://rele-ai-project-matan.herokuapp.com/"
             }
@@ -154,7 +151,7 @@ export default {
               title: ""
             },
             back: {
-              title: "For source code and website:",
+              title: "Open a league with your friends and bet game results.",
               source: "https://github.com/matany90/BetMasters"
             }
           },
@@ -253,6 +250,21 @@ export default {
   &--card {
     margin: 10px;
 
+    // back card
+    &--back--background {
+      background: map-deep-get($matan-colors, "tertiary");
+      @include flipcard-back-background;
+    }
+
+    &--back--title {
+      font-family: $card-title-font-family;
+      font-size: 20px;
+      margin-left: 40px;
+      margin-right: 40px;
+      color: white;
+    }
+
+    // front cards
     // Matan's Website
     &--front-matanwebsite-background {
       background: linear-gradient(
@@ -271,22 +283,9 @@ export default {
       margin-top: 10px;
     }
 
-    &--back-matanwebsite-background {
-      background: map-deep-get($matan-colors, "tertiary");
-      @include flipcard-back-background;
-    }
-
-    &--back-matanwebsite-title {
-      font-family: $card-title-font-family;
-      font-size: 25px;
-      margin-left: 40px;
-      margin-right: 40px;
-      color: white;
-    }
-
     // Bet Masters
     &--front-betmasters-background {
-      background-image: url("../../assets/images/betmasters-background.png");
+      background-image: url("../../assets/images/betmasters-background.jpg");
       @include flipcard-front-background;
     }
 
@@ -315,19 +314,6 @@ export default {
       color: white;
     }
 
-    &--back-usermanagement-background {
-      background: map-deep-get($matan-colors, "tertiary");
-      @include flipcard-back-background;
-    }
-
-    &--back-usermanagement-title {
-      font-family: $card-title-font-family;
-      font-size: 25px;
-      margin-left: 40px;
-      margin-right: 40px;
-      color: white;
-    }
-
     // My locations
     &--front-mylocations-background {
       background-image: url("../../assets/images/mylocations-background.jpg");
@@ -338,19 +324,6 @@ export default {
       font-family: "Rubik", sans-serif;
       font-size: 35px;
       text-shadow: 1px 1px map-deep-get($matan-colors, "grey", "purple");
-      color: white;
-    }
-
-    &--back-mylocations-background {
-      background: map-deep-get($matan-colors, "tertiary");
-      @include flipcard-back-background;
-    }
-
-    &--back-mylocations-title {
-      font-family: $card-title-font-family;
-      font-size: 25px;
-      margin-left: 40px;
-      margin-right: 40px;
       color: white;
     }
 
@@ -368,19 +341,6 @@ export default {
       color: map-deep-get($matan-colors, "primary");
     }
 
-    &--back-tvshows-background {
-      background: map-deep-get($matan-colors, "tertiary");
-      @include flipcard-back-background;
-    }
-
-    &--back-tvshows-title {
-      font-family: $card-title-font-family;
-      font-size: 25px;
-      margin-left: 40px;
-      margin-right: 40px;
-      color: white;
-    }
-
     // Chat app
     &--front-chat-background {
       background-image: url("../../assets/images/chat-app-background.jpg");
@@ -395,19 +355,7 @@ export default {
       color: white;
     }
 
-    &--back-chat-background {
-      background: map-deep-get($matan-colors, "tertiary");
-      @include flipcard-back-background;
-    }
-
-    &--back-chat-title {
-      font-family: $card-title-font-family;
-      font-size: 25px;
-      margin-left: 40px;
-      margin-right: 40px;
-      color: white;
-    }
-
+    // buttons back card
     &--back-buttons {
       display: flex;
       flex-direction: column;

@@ -4,7 +4,7 @@ export const en = {
     loading: "You'll be there in a moment...",
     mainSection: {
       title: "Experienced Full-Stack Developer & Software Engineer",
-      subtitle: "I write code for a living, and I'm just love what I'm doing."
+      subtitle: "I write code for a living, and I just love what I'm doing."
     },
     cards: {
       title: "Hi, I'm Matan",
@@ -58,7 +58,7 @@ export const en = {
     message: "Message"
   },
   buttons: {
-    sayHello: "Say Hello",
+    sayHello: "Let's Talk",
     getCV: "Get My CV",
     submit: "Submit",
     sourceCode: "Source Code",
