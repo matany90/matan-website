@@ -64,11 +64,6 @@ const TIMEOUT_INTERVAL = 1500
 const WORK_CARDS = 6
 
 export default {
-  mounted() {
-    console.log("height: ", window.screen.height)
-    console.log("width: ", window.screen.width)
-  },
-
   // local state
   data() {
     return {
@@ -165,10 +160,6 @@ export default {
     width: 90%;
     position: absolute;
     top: 75%;
-
-    // @include media("<=tablet") {
-    //   top: 75%;
-    // }
   }
 }
 

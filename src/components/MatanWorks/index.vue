@@ -200,8 +200,8 @@ export default {
 
     &--text {
       @include media(">=tablet") {
-        margin-left: 15vh;
-        margin-right: 15vh;
+        margin-left: 5vh;
+        margin-right: 5vh;
       }
     }
   }

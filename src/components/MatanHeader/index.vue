@@ -1,46 +1,43 @@
 <template>
   <!-- Header container -->
   <div class="matan-header" v-on="$listeners">
-    <!-- Row header -->
-    <m-row>
-      <!-- Left column -->
-      <m-col class="matan-header--left">
-        <!-- website's Icon -->
-        <m-icon
-          @click="onIconPress"
-          name="logo1.png"
-          class="matan-header--left--icon"
-        />
-      </m-col>
+    <!-- Left column -->
+    <div class="matan-header--left">
+      <!-- website's Icon -->
+      <m-icon
+        @click="onIconPress"
+        name="logo1.png"
+        class="matan-header--left--icon"
+      />
+    </div>
 
-      <!-- Right column -->
-      <m-col class="matan-header--right">
-        <div class="matan-header--buttons">
-          <!-- Buttons -->
-          <m-button
-            class="matan-header--button--cv"
-            rounded
-            color="primary"
-            @click="onCbButtonClick"
-          >
-            {{ $t("buttons.getCV") }}
-          </m-button>
-          <m-button
-            @click="pushToContactPage"
-            class="matan-header--button"
-            rounded
-            color="primary"
-          >
-            {{ $t("buttons.sayHello") }}
-          </m-button>
-        </div>
-        <m-icon
-          class="matan-header--menu"
-          name="open-menu"
-          @click="onMenuClick"
-        />
-      </m-col>
-    </m-row>
+    <!-- Right column -->
+    <div class="matan-header--right">
+      <div class="matan-header--buttons">
+        <!-- Buttons -->
+        <m-button
+          class="matan-header--button--cv"
+          rounded
+          color="primary"
+          @click="onCbButtonClick"
+        >
+          {{ $t("buttons.getCV") }}
+        </m-button>
+        <m-button
+          @click="pushToContactPage"
+          class="matan-header--button"
+          rounded
+          color="primary"
+        >
+          {{ $t("buttons.sayHello") }}
+        </m-button>
+      </div>
+      <m-icon
+        class="matan-header--menu"
+        name="open-menu"
+        @click="onMenuClick"
+      />
+    </div>
   </div>
 </template>
 
@@ -72,6 +69,8 @@ export default {
 @import "../../style/_main.scss";
 
 .matan-header {
+  display: flex;
+  flex-direction: row;
   width: 100%;
   height: 150px;
 
@@ -94,17 +93,14 @@ export default {
 
   &--right {
     width: 50%;
-    align-items: flex-end;
-    justify-content: flex-end;
+    display: flex;
     flex-direction: row;
+    justify-content: flex-end;
   }
 
   &--button {
     margin-top: 4vh;
     margin-right: 3vh;
-    @media (max-width: 1400px) {
-      margin-right: 15vh;
-    }
 
     &--cv {
       border: none;
@@ -122,6 +118,7 @@ export default {
     width: 25px;
     height: 25px;
     margin-right: 3vh;
+    margin-top: 45px;
     @include media(">=tablet") {
       display: none;
     }

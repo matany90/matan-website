@@ -67,8 +67,13 @@ export default {
 
     // inner images
     &--image {
-      width: 30vh;
-      height: 37vh;
+      width: 20rem;
+      height: 25rem;
+
+      @include media("<tablet") {
+        width: 16rem;
+        height: 20rem;
+      }
     }
   }
 }

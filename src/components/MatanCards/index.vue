@@ -137,7 +137,7 @@ export default {
   display: flex;
   flex-direction: row;
   height: 800px;
-  width: 85%;
+  width: 95%;
 
   @include media("<=tablet") {
     flex-direction: column;
