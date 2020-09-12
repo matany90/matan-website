@@ -46,8 +46,8 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 85vh;
-  margin-bottom: 10vh;
+  margin-top: 55rem;
+  margin-bottom: 10rem;
 
   @include media(">phone", "<desktop") {
     margin-top: 50vh;

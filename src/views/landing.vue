@@ -18,23 +18,25 @@
       <matan-intro @on-image-loaded="onImageLoaded" />
 
       <!-- Linear Gradient text box -->
-      <matan-gradient-text class="overlay--gradient">
-        <!-- Title -->
-        <template v-slot:title>
-          <div>{{ $t("landing.cards.title") }}</div>
-        </template>
+      <div class="overlay--gradient">
+        <matan-gradient-text>
+          <!-- Title -->
+          <template v-slot:title>
+            <div>{{ $t("landing.cards.title") }}</div>
+          </template>
 
-        <!-- Body -->
-        <template v-slot:body>
-          <div
-            class="overlay--gradient--text"
-            v-html="$t('landing.cards.intro')"
-          />
-        </template>
-      </matan-gradient-text>
+          <!-- Body -->
+          <template v-slot:body>
+            <div
+              class="overlay--gradient--text"
+              v-html="$t('landing.cards.intro')"
+            />
+          </template>
+        </matan-gradient-text>
 
-      <!-- Cards -->
-      <matan-cards class="overlay--cards" />
+        <!-- Cards -->
+        <matan-cards class="overlay--cards" />
+      </div>
 
       <!-- Technologies -->
       <matan-technologies />
@@ -62,6 +64,11 @@ const TIMEOUT_INTERVAL = 1500
 const WORK_CARDS = 6
 
 export default {
+  mounted() {
+    console.log("height: ", window.screen.height)
+    console.log("width: ", window.screen.width)
+  },
+
   // local state
   data() {
     return {
@@ -157,11 +164,11 @@ export default {
   &--cards {
     width: 90%;
     position: absolute;
-    top: 130vh;
+    top: 75%;
 
-    @include media("<=tablet") {
-      top: 88rem;
-    }
+    // @include media("<=tablet") {
+    //   top: 75%;
+    // }
   }
 }
 

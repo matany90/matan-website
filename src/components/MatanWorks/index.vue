@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="overlay--gradient">
     <!-- Linear Gradient text box -->
-    <matan-gradient-text class="overlay--gradient">
+    <matan-gradient-text>
       <!-- Title -->
       <template v-slot:title>
         <div>{{ $t("landing.works.title") }}</div>
@@ -209,10 +209,10 @@ export default {
 
 // work flip cards
 .matan-flip-cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 70%;
+  // top: 360vh;
 
   &--lines {
     display: flex;
@@ -225,9 +225,9 @@ export default {
 
   &--overlay {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    position: absolute;
-    top: 360vh;
 
     // cards heigth medium screen
     @media screen and (min-height: 900px) {

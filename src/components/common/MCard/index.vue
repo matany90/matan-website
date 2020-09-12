@@ -38,6 +38,7 @@
   background: white;
   border-radius: $card-border-radius;
   border: 1px solid map-deep-get($matan-colors, "grey", "light");
+  overflow: hidden; /* Hide scrollbars */
 
   @include shadow(2px 2px 6px 2px rgba(0, 0, 0, 0.1));
 
@@ -53,7 +54,12 @@
     flex: 1 1 auto;
     padding: 0 1em;
     position: relative;
-    overflow: scroll;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 5px; /* Increase/decrease this value for cross-browser compatibility */
+    padding-left: 5px;
+    box-sizing: content-box; /* So the width will be 100% + 17px */
   }
 
   // actions class
