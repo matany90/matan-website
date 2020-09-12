@@ -17,7 +17,7 @@ Technologies I used:
 - Firebase Hosting
 - SCSS
 
-### App Scrennshots:
+### App Screenshots:
 ![alt text](https://imgur.com/qKYRyp0.png)
 
 
