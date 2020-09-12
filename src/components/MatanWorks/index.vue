@@ -42,7 +42,7 @@
                   <div
                     :class="`matan-flip-cards--card--front-${card.name}-title`"
                   >
-                    {{ card.front.title }}
+                    {{ $t(`landing.works.cards.${card.name}.front.title`) }}
                   </div>
                 </div>
               </template>
@@ -51,7 +51,7 @@
               <template v-slot:back>
                 <div class="matan-flip-cards--card--back--background">
                   <div class="matan-flip-cards--card--back--title">
-                    {{ card.back.title }}
+                    {{ $t(`landing.works.cards.${card.name}.back.title`) }}
                   </div>
 
                   <!-- Back Buttons -->
@@ -97,36 +97,21 @@ export default {
         [
           {
             name: "chat",
-            front: {
-              title: "Matan's Chat"
-            },
             back: {
-              title:
-                "A Chat-messaging Web-application that allows users to open private rooms.",
               source: "https://github.com/matany90/Chat-App",
               website: "https://chat-app-client-matan.herokuapp.com/"
             }
           },
           {
             name: "tvshows",
-            front: {
-              title: "TV Shows"
-            },
             back: {
-              title:
-                "Cross-Platform Mobile App that presents information about TV shows around the world.",
               source: "https://github.com/matany90/Tv-Shows"
             }
           },
           {
             name: "mylocations",
             icon: "mylocations",
-            front: {
-              title: "My Locations"
-            },
             back: {
-              title:
-                "Web Application that helps you save your favorite categories and locations.",
               source: "https://github.com/matany90/My-Locations",
               website: "https://my-locations-app-matan-client.herokuapp.com/"
             }
@@ -136,35 +121,23 @@ export default {
           {
             name: "usermanagement",
             icon: "usermanagement.png",
-            front: {
-              title: "User Management"
-            },
             back: {
-              title: "User's management Web Application.",
               source: "https://github.com/matany90/User-management",
               website: "https://rele-ai-project-matan.herokuapp.com/"
             }
           },
           {
             name: "betmasters",
-            front: {
-              title: ""
-            },
             back: {
-              title: "Open a league with your friends and bet game results.",
               source: "https://github.com/matany90/BetMasters"
             }
           },
           {
             name: "matanwebsite",
             icon: "matan-image.png",
-            front: {
-              title: "Matan's Website"
-            },
             back: {
-              title: "For source code and website:",
               source: "https://github.com/matany90/matan-website",
-              website: "https://matan-website.firebaseapp.com/"
+              website: "https://matanyechiel.com"
             }
           }
         ]

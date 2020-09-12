@@ -45,7 +45,60 @@ export const en = {
     works: {
       title: "Take a look at my latest projects",
       intro:
-        "You are more than welcome to take a look at my latest work. <br /> You will find here mobile applications, web applications and many other good stuff... <br /> All the other projects beyond those shown here, you can find in my Github account."
+        "You are more than welcome to take a look at my latest work. <br /> You will find here mobile applications, web applications and many other good stuff... <br /> All the other projects beyond those shown here, you can find in my Github account.",
+      cards: {
+        chat: {
+          front: {
+            title: "Matan's Chat"
+          },
+          back: {
+            title:
+              "A Chat-messaging Web-application that allows users to open private rooms."
+          }
+        },
+        tvshows: {
+          front: {
+            title: "TV Shows"
+          },
+          back: {
+            title:
+              "Cross-Platform Mobile App that presents information about TV shows around the world."
+          }
+        },
+        mylocations: {
+          front: {
+            title: "My Locations"
+          },
+          back: {
+            title:
+              "Web Application that helps you save your favorite categories and locations."
+          }
+        },
+        usermanagement: {
+          front: {
+            title: "User Management"
+          },
+          back: {
+            title: "User's management Web Application."
+          }
+        },
+        betmasters: {
+          front: {
+            title: ""
+          },
+          back: {
+            title: "Open a league with your friends and bet game results."
+          }
+        },
+        matanwebsite: {
+          front: {
+            title: "Matan's Website"
+          },
+          back: {
+            title: "For source code and website:"
+          }
+        }
+      }
     },
     footer: {
       title: "Living, learning, & leveling up one day at a time."
