@@ -9,7 +9,7 @@ export const en = {
     cards: {
       title: "Hi, I'm Matan",
       intro:
-        "For the past three years I have been working as a software developer, both independently and during my work. I have rich experience with a variety of programming languages ​​and frameworks, development E2E features from scratch on both server side and client side. My belief is that in order to be good at what you do - you must love what you do.",
+        "For the past three years I have been working as a software engineer, both independently and during my work. I have rich experience with a variety of programming languages ​​and frameworks, development of E2E features from scratch on both server side and client side. My belief is that in order to be good at what you do - you must love what you do.",
       frontEnd: {
         title: "Front-end Developer",
         line1: "Building user interfaces from scratch.",
