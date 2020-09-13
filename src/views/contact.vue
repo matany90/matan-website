@@ -92,7 +92,6 @@ export default {
 
       // send email
       try {
-        console.log("bodyy", this.body)
         await api.mail.send(this.email, this.name, this.body)
 
         // redirect to success page
