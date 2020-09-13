@@ -30,7 +30,7 @@
       />
     </div>
     <div class="matan-form">
-      <m-text-field
+      <m-text-area
         v-model="body"
         :label="$t('contact.message')"
         class="matan-form--input--message"
@@ -92,6 +92,7 @@ export default {
 
       // send email
       try {
+        console.log("bodyy", this.body)
         await api.mail.send(this.email, this.name, this.body)
 
         // redirect to success page
