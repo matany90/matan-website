@@ -49,6 +49,16 @@
 
       <!-- Recommnedations -->
       <!-- <matan-recommendation /> -->
+      <m-slider
+        style="margin-top: 100vh;"
+        :data="exampleData.all"
+        @on-slider-switch="onSliderSwitch"
+        :interval="3000"
+      >
+        <div class="test">
+          {{ exampleData.selected }}
+        </div>
+      </m-slider>
 
       <!-- Footer -->
       <matan-footer />
@@ -77,7 +87,13 @@ export default {
       isWorkCardsLoaded: true,
 
       // works images loading
-      worksImagesLoaded: []
+      worksImagesLoaded: [],
+
+      // slider example data
+      exampleData: {
+        all: ["hiiii1", "hdddd2", "kffff3", "fjjjjj4", "kffff5"],
+        selected: "hiiii1"
+      }
     }
   },
 
@@ -90,6 +106,13 @@ export default {
 
   // methods
   methods: {
+    /**
+     * On Slider Switch
+     */
+    onSliderSwitch(i) {
+      this.$set(this.exampleData, "selected", this.exampleData.all[i])
+    },
+
     /**
      * Toggle is menu
      */
