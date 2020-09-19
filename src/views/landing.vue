@@ -181,10 +181,10 @@ export default {
 }
 
 .matan-recommendation {
-  margin-top: 40rem;
+  margin-top: 33rem;
 
   @include media("<tablet") {
-    margin-top: 100rem;
+    margin-top: 93rem;
   }
 }
 </style>

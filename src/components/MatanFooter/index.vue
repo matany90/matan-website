@@ -98,10 +98,10 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 30vh;
+  margin-top: 20vh;
 
   @include media("<tablet") {
-    margin-top: 40vh;
+    margin-top: 20vh;
   }
 
   &--icon {

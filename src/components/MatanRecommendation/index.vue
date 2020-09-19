@@ -1,6 +1,10 @@
 <template>
   <div class="recommnedations-container">
+    <hr class="main-logo" />
     <div class="title">
+      Recommnedations
+    </div>
+    <div class="subtitle">
       I was lucky enough to work with some wonderful people over the years
     </div>
     <m-slider
@@ -106,22 +110,22 @@ export default {
 }
 
 .slider {
-  margin-top: 8rem;
+  margin-top: 5rem;
 }
 
 // reccomandation
 .recommnedation {
   &--avatar {
     border-radius: 50%;
-    height: 7rem;
-    width: 7rem;
+    height: 8rem;
+    width: 8rem;
   }
 
   &--quote {
     height: 5rem;
     margin-top: 5vh;
     font-family: $section-title-font-family;
-    font-weight: 300;
+    font-weight: 400;
     margin-left: 25%;
     margin-right: 25%;
 
@@ -153,9 +157,16 @@ export default {
   font-weight: $section-title-font-weight;
   margin-left: 5%;
   margin-right: 5%;
+  margin-top: 7rem;
+
+  @include media("<tablet") {
+    margin-top: 5rem;
+  }
 }
 
 .subtitle {
+  margin-left: 5%;
+  margin-right: 5%;
   margin-top: 5px;
   font-size: 18px;
 }
@@ -170,5 +181,8 @@ export default {
 /* .slide-fade-leave-active for <2.1.8 */ {
   transform: translateX(10px);
   opacity: 0;
+}
+.main-logo {
+  border-top: 1px map-deep-get($matan-colors, "grey", "light");
 }
 </style>
