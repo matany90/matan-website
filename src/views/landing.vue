@@ -48,17 +48,7 @@
       />
 
       <!-- Recommnedations -->
-      <!-- <matan-recommendation /> -->
-      <m-slider
-        style="margin-top: 100vh;"
-        :data="exampleData.all"
-        @on-slider-switch="onSliderSwitch"
-        :interval="3000"
-      >
-        <div class="test">
-          {{ exampleData.selected }}
-        </div>
-      </m-slider>
+      <matan-recommendation class="matan-recommendation" />
 
       <!-- Footer -->
       <matan-footer />
@@ -87,13 +77,7 @@ export default {
       isWorkCardsLoaded: true,
 
       // works images loading
-      worksImagesLoaded: [],
-
-      // slider example data
-      exampleData: {
-        all: ["hiiii1", "hdddd2", "kffff3", "fjjjjj4", "kffff5"],
-        selected: "hiiii1"
-      }
+      worksImagesLoaded: []
     }
   },
 
@@ -106,13 +90,6 @@ export default {
 
   // methods
   methods: {
-    /**
-     * On Slider Switch
-     */
-    onSliderSwitch(i) {
-      this.$set(this.exampleData, "selected", this.exampleData.all[i])
-    },
-
     /**
      * Toggle is menu
      */
@@ -201,5 +178,13 @@ export default {
   height: 0;
   padding: 0 10px;
   opacity: 0;
+}
+
+.matan-recommendation {
+  margin-top: 40rem;
+
+  @include media("<tablet") {
+    margin-top: 100rem;
+  }
 }
 </style>

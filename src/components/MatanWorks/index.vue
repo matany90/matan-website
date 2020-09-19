@@ -231,6 +231,7 @@ export default {
 
     &--back--title {
       font-family: $card-title-font-family;
+      font-weight: $card-title-font-weight;
       font-size: 20px;
       margin-left: 40px;
       margin-right: 40px;

@@ -61,6 +61,7 @@ export default {
   &--title {
     font-family: $section-title-font-family;
     font-size: $section-title-font-size;
+    font-weight: $section-title-font-weight;
     color: black;
     margin-left: 5%;
     margin-right: 5%;

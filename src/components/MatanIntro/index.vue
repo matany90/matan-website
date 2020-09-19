@@ -48,6 +48,7 @@ export default {
   &--title {
     font-size: $title-font-size;
     font-family: $title-font-family;
+    font-weight: $title-font-weight;
     margin-top: 5vh;
     margin-left: 5%;
     margin-right: 5%;
