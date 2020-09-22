@@ -14,10 +14,7 @@
       :interval="switchInterval"
     >
       <transition name="slide-fade" mode="out-in">
-        <div
-          class="recommnedation"
-          :key="exampleData.all[exampleData.selectedIndex]"
-        >
+        <div class="recommnedation" :key="exampleData.selectedIndex">
           <!-- Avatar -->
           <img
             :src="exampleData.all[exampleData.selectedIndex].avatar"
@@ -157,7 +154,7 @@ export default {
   font-weight: $section-title-font-weight;
   margin-left: 5%;
   margin-right: 5%;
-  margin-top: 7rem;
+  margin-top: 5rem;
 
   @include media("<tablet") {
     margin-top: 5rem;

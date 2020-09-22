@@ -98,7 +98,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 20vh;
+  margin-top: 10vh;
 
   @include media("<tablet") {
     margin-top: 20vh;

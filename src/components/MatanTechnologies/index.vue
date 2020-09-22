@@ -12,12 +12,26 @@
         class="matan-technologies--container--icons"
         :key="j"
       >
-        <m-icon
-          v-for="(tech, i) in techLine"
-          :key="i"
-          :name="tech"
-          class="matan-technologies--container--icons--icon"
-        />
+        <div v-for="(tech, i) in techLine" :key="i">
+          <!-- Icon container -->
+          <div class="matan-technologies--container--icons--icon-container">
+            <!-- Icon -->
+            <m-icon
+              :name="tech"
+              @mouseover="activeTooltip(tech)"
+              @mouseleave="resetTooltip"
+              class="matan-technologies--container--icons--icon"
+            />
+            <!-- Tooltip -->
+            <div class="matan-technologies--container--icons--tooltip">
+              <transition name="fade">
+                <div v-if="toolTip === tech">
+                  <span class="tooltiptext">{{ tech }}</span>
+                </div>
+              </transition>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -31,7 +45,20 @@ export default {
       technologies: [
         ["react", "vue", "nodejs", "python", "javascript", "microservices"],
         ["kubernetes", "docker", "firestore", "google-cloud", "mongodb", "grpc"]
-      ]
+      ],
+
+      // is tool tipe visible
+      toolTip: ""
+    }
+  },
+
+  // methods
+  methods: {
+    activeTooltip(tech) {
+      this.toolTip = tech
+    },
+    resetTooltip() {
+      this.toolTip = ""
     }
   }
 }
@@ -84,10 +111,44 @@ export default {
       &--icon {
         width: 150px;
         height: 70px;
+      }
+
+      &--tooltip {
+        height: 40px;
+        margin-bottom: 30px;
+      }
+
+      &--icon-container {
+        position: relative;
         margin: 20px;
-        margin-bottom: 80px;
       }
     }
+  }
+
+  .tooltiptext {
+    width: 120px;
+    background: map-deep-get($matan-colors, "tertiary");
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+  }
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s;
+  }
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
   }
 }
 </style>
