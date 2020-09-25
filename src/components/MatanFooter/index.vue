@@ -98,7 +98,11 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 70vh;
+  margin-top: 10vh;
+
+  @include media("<tablet") {
+    margin-top: 20vh;
+  }
 
   &--icon {
     display: flex;
@@ -115,13 +119,10 @@ export default {
   &--title {
     font-family: $root-font-family;
     font-size: $footer-title-size;
+    font-weight: 300;
     margin-top: 5vh;
     margin-left: 20%;
     margin-right: 20%;
-  }
-
-  @include media("<tablet") {
-    margin-top: 240vh;
   }
 
   &--img {

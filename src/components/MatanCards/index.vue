@@ -157,6 +157,7 @@ export default {
     margin-bottom: 25px;
     font-family: $card-title-font-family;
     font-size: $card-title-font-size;
+    font-weight: $card-title-font-weight;
     color: black;
     font-weight: map-get($font-weights, "bold");
   }

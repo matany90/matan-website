@@ -38,6 +38,7 @@
   &--title {
     font-family: $section-title-font-family;
     font-size: $section-title-font-size;
+    font-weight: $section-title-font-weight;
     margin-bottom: 15px;
     margin-top: 170px;
     @include media("<tablet") {

@@ -48,7 +48,7 @@
       />
 
       <!-- Recommnedations -->
-      <!-- <matan-recommendation /> -->
+      <matan-recommendation class="matan-recommendation" />
 
       <!-- Footer -->
       <matan-footer />
@@ -178,5 +178,13 @@ export default {
   height: 0;
   padding: 0 10px;
   opacity: 0;
+}
+
+.matan-recommendation {
+  margin-top: 28rem;
+
+  @include media("<tablet") {
+    margin-top: 93rem;
+  }
 }
 </style>
