@@ -115,7 +115,7 @@ export const en = {
       }
     },
     footer: {
-      title: "Living, learning, & leveling up one day at a time."
+      title: "Learn something new every day."
     }
   },
   contact: {

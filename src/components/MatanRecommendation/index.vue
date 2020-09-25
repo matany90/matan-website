@@ -129,28 +129,24 @@ export default {
   }
 
   &--quote {
-    height: 5rem;
-    margin-top: 5vh;
+    height: 10rem;
+    margin-top: 2rem;
     font-family: $section-title-font-family;
     font-weight: 400;
     margin-left: 25%;
     margin-right: 25%;
 
     @include media("<tablet") {
+      height: 20rem;
       margin-left: 3rem;
       margin-right: 3rem;
     }
   }
 
   &--name {
-    margin-top: 10vh;
     font-family: $section-title-font-family;
     font-weight: map-get($font-weights, "bold");
     font-size: 20px;
-
-    @include media("<tablet") {
-      margin-top: 33vh;
-    }
   }
 
   &--work {
