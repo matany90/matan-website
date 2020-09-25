@@ -40,7 +40,21 @@ export const en = {
       }
     },
     technologies: {
-      title: "I have experience with a variety of technologies:"
+      title: "I have experience with a variety of technologies:",
+      tooltip: {
+        react: "React <br /> React-Native",
+        vue: "Vue.js",
+        nodejs: "Node.js",
+        javascript: "Javascript",
+        microservices: "Microservices",
+        kubernetes: "Kubernetes",
+        docker: "Docker",
+        firestore: "Firestore DB",
+        "google-cloud": "Google Cloud",
+        mongodb: "Mongo DB",
+        grpc: "gRPC",
+        python: "Python"
+      }
     },
     works: {
       title: "Take a look at my latest projects",

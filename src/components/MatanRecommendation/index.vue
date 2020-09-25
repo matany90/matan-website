@@ -18,6 +18,11 @@
           <!-- Avatar -->
           <img
             :src="exampleData.all[exampleData.selectedIndex].avatar"
+            @click="
+              onLinkedInPress(
+                exampleData.all[exampleData.selectedIndex].linkedin
+              )
+            "
             class="recommnedation--avatar"
           />
           <!-- Quote -->
@@ -39,7 +44,7 @@
 </template>
 
 <script>
-const SWITCH_INTERVAL = 5000
+const SWITCH_INTERVAL = 7000
 
 export default {
   // local state
@@ -50,24 +55,19 @@ export default {
         all: [
           {
             avatar:
-              "https://media-exp1.licdn.com/dms/image/C5603AQG_qLuoP5-XTA/profile-displayphoto-shrink_800_800/0?e=1605744000&v=beta&t=e16Sja3djK5Y-5icuhdOCXHpkbOZunT3fRFz6OpPbHM",
-            name: "Tim Heubach",
-            workAt: "Maccabi Netanya",
-            quote: `"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."`
+              "https://media-exp1.licdn.com/dms/image/C5603AQFUli6dmENWjg/profile-displayphoto-shrink_800_800/0?e=1606348800&v=beta&t=ce1Oy8B3gQOQlRz6tjBfP5iKys_Nt-oVleha9jtpx7w",
+            name: "Eran Ribak",
+            linkedin: "https://www.linkedin.com/in/eran-ribak-38a13434/",
+            workAt: "IT Management Professional, The Coca-Cola Company",
+            quote: `"I had the privilege of being the direct director of Matan for about two years. Matan is smart, hardworking and always wants to learn new things. Beyond work, Matan is a wonderful friend and a fun person to be around. I had the pleasure of working with him."`
           },
           {
             avatar:
-              "https://media-exp1.licdn.com/dms/image/C5603AQFZvzKVyMxUFw/profile-displayphoto-shrink_400_400/0?e=1605744000&v=beta&t=N_4u7eeaGik97mJ2UCj4l-werfS3563JKGgSE0io3Rg",
-            name: "Matan Yechiel",
-            workAt: "Somewhere",
-            quote: `"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock."`
-          },
-          {
-            avatar:
-              "https://media-exp1.licdn.com/dms/image/C5103AQEpWsaK05aByg/profile-displayphoto-shrink_400_400/0?e=1605744000&v=beta&t=ODq9iU-Md5nWIWGMV3KFfoY8_ZFqz_-5ssMmZOqYNXs",
-            name: "Almog Gever",
-            workAt: "Some place",
-            quote: `"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form."`
+              "https://media-exp1.licdn.com/dms/image/C5603AQEme8GOAsSziQ/profile-displayphoto-shrink_400_400/0?e=1606348800&v=beta&t=90HSthh2eZZAjis_VZYYxTAmudmdXCcxEr0bpB1DqNw",
+            name: "Liel Bach",
+            linkedin: "https://www.linkedin.com/in/liel-bach-140433100/",
+            workAt: "Big Data Developer, Goverment",
+            quote: `"I have worked with Matan on a joint project, in which we developed a mobile app. Working with Matan was wonderful. He is professional, excellent at problem solving and a great co-worker."`
           }
         ],
         selectedIndex: 0
@@ -92,6 +92,15 @@ export default {
      */
     onSliderSwitch(i) {
       this.$set(this.exampleData, "selectedIndex", i)
+    },
+
+    /**
+     * On linkdin press
+     */
+    onLinkedInPress(link) {
+      if (link) {
+        window.open(link, "_blank")
+      }
     }
   }
 }
@@ -116,6 +125,7 @@ export default {
     border-radius: 50%;
     height: 8rem;
     width: 8rem;
+    cursor: pointer;
   }
 
   &--quote {
@@ -145,6 +155,8 @@ export default {
 
   &--work {
     font-size: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
 

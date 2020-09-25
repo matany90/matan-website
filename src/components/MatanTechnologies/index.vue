@@ -26,7 +26,10 @@
             <div class="matan-technologies--container--icons--tooltip">
               <transition name="fade">
                 <div v-if="toolTip === tech">
-                  <span class="tooltiptext">{{ tech }}</span>
+                  <span
+                    class="tooltiptext"
+                    v-html="$t(`landing.technologies.tooltip.${tech}`)"
+                  />
                 </div>
               </transition>
             </div>
@@ -126,7 +129,9 @@ export default {
   }
 
   .tooltiptext {
-    width: 120px;
+    width: 150px;
+    font-family: $card-title-font-family;
+    font-size: 20px;
     background: map-deep-get($matan-colors, "tertiary");
     color: #fff;
     text-align: center;
