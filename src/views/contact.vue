@@ -203,9 +203,6 @@ export default {
   justify-content: center;
   align-content: center;
   margin-top: 3vh;
-
-  @include media("<=tablet") {
-    margin-bottom: 5vh;
-  }
+  margin-bottom: 5vh;
 }
 </style>
