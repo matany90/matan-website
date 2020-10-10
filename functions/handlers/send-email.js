@@ -18,10 +18,12 @@ exports.handler = async (req, res) => {
   res.set("Access-Control-Allow-Methods", "GET, PUT, POST, OPTIONS")
   res.set("Access-Control-Allow-Headers", "*")
 
-  // pull data
-  const { clientEmail, clientName, subject, body } = req.body
-
   try {
+    let sentRes = {}
+
+    // pull data
+    const { clientEmail, clientName, subject, body } = req.body
+
     // pull envs
     const { config } = functions.config()
 
@@ -34,20 +36,22 @@ exports.handler = async (req, res) => {
       }
     })
 
-    // define mail options
-    const mailOptions = {
-      from: config.email,
-      to: config.destination_email,
-      subject,
-      html: `<div><h3>Got a new message from ${clientName}, his email is: ${clientEmail}</h3><p>${body}</p></div>`
-    }
+    if (Object.keys(req.body).length) {
+      // define mail options
+      const mailOptions = {
+        from: config.email,
+        to: config.destination_email,
+        subject,
+        html: `<div><h3>Got a new message from ${clientName}, his email is: ${clientEmail}</h3><p>${body}</p></div>`
+      }
 
-    // send mail
-    const sentRes = await transporter.sendMail(mailOptions)
+      // send mail
+      sentRes = await transporter.sendMail(mailOptions)
+    }
 
     // returns response
     res.json({ sentRes })
-  } catch (e) {
-    res.status(500).json({ error: "Unable to send an email." })
+  } catch (error) {
+    res.status(500).json({ error })
   }
 }
