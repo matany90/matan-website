@@ -145,11 +145,12 @@ export default {
   }
 
   &--image {
-    width: 12vh;
+    width: 7rem;
     top: 70px;
     position: absolute;
 
     @include media("<tablet") {
+      width: 6rem;
       top: 85px;
     }
   }
@@ -158,14 +159,14 @@ export default {
     text-align: center;
     margin-left: 25%;
     margin-right: 25%;
-    margin-top: 10vh;
-    margin-bottom: 2vh;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
     font-size: $contact-page-title-size;
     font-weight: $contact-page-title-weight;
     @include media("<tablet") {
       margin-left: 15%;
       margin-right: 15%;
-      margin-bottom: 4vh;
+      margin-bottom: 2rem;
     }
   }
 }

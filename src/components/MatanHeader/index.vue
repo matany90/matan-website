@@ -78,13 +78,14 @@ export default {
     width: 50%;
 
     &--icon {
-      margin-top: 4vh;
-      margin-left: 3vh;
+      margin-top: 2rem;
+      margin-left: 1.5rem;
       width: 50px;
       height: 60px;
       cursor: pointer;
 
       @include media("<tablet") {
+        margin-left: 1rem;
         width: 35px;
         height: 40px;
       }
@@ -117,7 +118,7 @@ export default {
   &--menu {
     width: 25px;
     height: 25px;
-    margin-right: 3vh;
+    margin-right: 1rem;
     margin-top: 45px;
     @include media(">=tablet") {
       display: none;
