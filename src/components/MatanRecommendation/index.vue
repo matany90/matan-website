@@ -63,7 +63,7 @@ export default {
           },
           {
             avatar:
-              "https://media-exp1.licdn.com/dms/image/C5603AQEme8GOAsSziQ/profile-displayphoto-shrink_400_400/0?e=1606348800&v=beta&t=90HSthh2eZZAjis_VZYYxTAmudmdXCcxEr0bpB1DqNw",
+              "https://media-exp1.licdn.com/dms/image/C4D03AQGaC0-tPs7yIQ/profile-displayphoto-shrink_800_800/0?e=1608768000&v=beta&t=gqxKk2fq7Rkta7qwoRufkvy74ptnIdz3ZldvmUg58hs",
             name: "Liel Bach",
             linkedin: "https://www.linkedin.com/in/liel-bach-140433100/",
             workAt: "Big Data Developer, Goverment",
