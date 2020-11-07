@@ -168,6 +168,7 @@ export default {
     }
   }
 
+  // made by
   &--made-by {
     margin-top: 8vh;
     font-size: $made-by-font-size;
