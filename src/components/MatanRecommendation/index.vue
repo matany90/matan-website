@@ -55,7 +55,7 @@ export default {
         all: [
           {
             avatar:
-              "https://media-exp1.licdn.com/dms/image/C5603AQFUli6dmENWjg/profile-displayphoto-shrink_800_800/0?e=1606348800&v=beta&t=ce1Oy8B3gQOQlRz6tjBfP5iKys_Nt-oVleha9jtpx7w",
+              "https://media-exp1.licdn.com/dms/image/C5603AQFUli6dmENWjg/profile-displayphoto-shrink_800_800/0/1558605661116?e=1612396800&v=beta&t=kE4UBGtjWRyRLljFcmj0GvYExPtVwxmChaIO6sP_1B8",
             name: "Eran Ribak",
             linkedin: "https://www.linkedin.com/in/eran-ribak-38a13434/",
             workAt: "IT Management Professional, The Coca-Cola Company",

@@ -53,7 +53,8 @@ export const en = {
         "google-cloud": "Google Cloud",
         mongodb: "Mongo DB",
         grpc: "gRPC",
-        python: "Python"
+        python: "Python",
+        golang: "Golang"
       }
     },
     works: {

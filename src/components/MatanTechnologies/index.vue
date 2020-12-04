@@ -28,7 +28,7 @@
                 <div v-if="toolTip === tech">
                   <span
                     class="tooltiptext"
-                    v-html="$t(`landing.technologies.tooltip.${tech}`)"
+                    v-html="$t(`landing.technologies.tooltip.${getTech(tech)}`)"
                   />
                 </div>
               </transition>
@@ -46,7 +46,7 @@ export default {
   data() {
     return {
       technologies: [
-        ["react", "vue", "nodejs", "python", "javascript", "microservices"],
+        ["react", "vue", "nodejs", "python", "javascript", "golang.png"],
         ["kubernetes", "docker", "firestore", "google-cloud", "mongodb", "grpc"]
       ],
 
@@ -57,11 +57,25 @@ export default {
 
   // methods
   methods: {
+    /**
+     * Activate tooltip
+     */
     activeTooltip(tech) {
       this.toolTip = tech
     },
+
+    /**
+     * Reset tooltip
+     */
     resetTooltip() {
       this.toolTip = ""
+    },
+
+    /**
+     * Returns the tech without suffix
+     */
+    getTech(tech) {
+      return tech.split(".")[0]
     }
   }
 }

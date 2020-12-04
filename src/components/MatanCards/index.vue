@@ -65,6 +65,7 @@ export default {
               "React.js",
               "React-Native",
               "SCSS",
+              "Tailwind CSS",
               "Vuex",
               "Redux",
               "Mobx"
@@ -85,6 +86,7 @@ export default {
             title: this.$t("landing.cards.backEnd.tools.title"),
             lines: [
               "Node.js",
+              "Golang",
               "Express",
               "gRCP",
               "Microservices",
