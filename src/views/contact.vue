@@ -204,6 +204,6 @@ export default {
   justify-content: center;
   align-content: center;
   margin-top: 3vh;
-  margin-bottom: 5vh;
+  padding-bottom: 5vh;
 }
 </style>
