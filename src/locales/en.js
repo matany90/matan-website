@@ -97,12 +97,13 @@ export const en = {
             title: "User's management Web Application."
           }
         },
-        betmasters: {
+        simplestarter: {
           front: {
             title: ""
           },
           back: {
-            title: "Open a league with your friends and bet game results."
+            title:
+              "Simple templates for server-side applications, in a variety of programming languages and technologies."
           }
         },
         matanwebsite: {

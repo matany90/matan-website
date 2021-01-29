@@ -127,9 +127,9 @@ export default {
             }
           },
           {
-            name: "betmasters",
+            name: "simplestarter",
             back: {
-              source: "https://github.com/matany90/BetMasters"
+              source: "https://github.com/matany90/RESTful-gRPC-simple-starters"
             }
           },
           {
@@ -258,17 +258,17 @@ export default {
     }
 
     // Bet Masters
-    &--front-betmasters-background {
-      background-image: url("../../assets/images/betmasters-background.jpg");
+    &--front-simplestarter-background {
+      background-image: url("../../assets/images/simplestarter.png");
       @include flipcard-front-background;
     }
 
-    &--back-betmasters-background {
+    &--back-simplestarter-background {
       background: map-deep-get($matan-colors, "tertiary");
       @include flipcard-back-background;
     }
 
-    &--back-betmasters-title {
+    &--back-simplestarter-title {
       font-family: $card-title-font-family;
       font-size: 25px;
       margin-left: 40px;
