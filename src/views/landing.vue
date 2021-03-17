@@ -10,7 +10,7 @@
     <div v-show="!isLogoLoading">
       <!-- Header -->
       <matan-header @on-menu-press="toggleMenu" />
-      <transition name="expand">
+      <transition name="slide">
         <m-menu v-if="isMenuOpen" @on-menu-press="toggleMenu" />
       </transition>
 
@@ -163,21 +163,15 @@ export default {
   }
 }
 
-/* always present */
-.expand-transition {
-  transition: all 0.3s ease;
-  height: 30px;
-  padding: 10px;
-  background-color: #eee;
-  overflow: hidden;
+.slide-leave-active,
+.slide-enter-active {
+  transition: 1s;
 }
-/* .expand-enter defines the starting state for entering */
-/* .expand-leave defines the ending state for leaving */
-.expand-enter,
-.expand-leave {
-  height: 0;
-  padding: 0 10px;
-  opacity: 0;
+.slide-enter {
+  transform: translate(100%, 0);
+}
+.slide-leave-to {
+  transform: translate(100%, 0);
 }
 
 .matan-recommendation {

@@ -30,6 +30,7 @@ exports.handler = async (req, res) => {
     // create transporter instance
     const transporter = nodemailer.createTransport({
       service: "gmail",
+      secure: false,
       auth: {
         user: config.email,
         pass: config.password

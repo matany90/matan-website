@@ -2,7 +2,9 @@
   <div class="contact-page">
     <!-- Header -->
     <matan-header @on-menu-press="toggleMenu" />
-    <m-menu v-if="isMenuOpen" @on-menu-press="toggleMenu" />
+    <transition name="slide">
+      <m-menu v-if="isMenuOpen" @on-menu-press="toggleMenu" />
+    </transition>
 
     <!-- Main logo -->
     <hr class="main-logo" />
@@ -205,5 +207,16 @@ export default {
   align-content: center;
   margin-top: 3vh;
   padding-bottom: 5vh;
+}
+
+.slide-leave-active,
+.slide-enter-active {
+  transition: 1s;
+}
+.slide-enter {
+  transform: translate(100%, 0);
+}
+.slide-leave-to {
+  transform: translate(100%, 0);
 }
 </style>
