@@ -55,7 +55,7 @@ export default {
         all: [
           {
             avatar:
-              "https://media-exp1.licdn.com/dms/image/C5603AQFUli6dmENWjg/profile-displayphoto-shrink_800_800/0/1558605661116?e=1630540800&v=beta&t=g3kK4Rc133TDqE4UQBddDCivzgHlTmu4Qaa94xNQGsg",
+              "https://media-exp1.licdn.com/dms/image/C5603AQFUli6dmENWjg/profile-displayphoto-shrink_800_800/0/1558605661116?e=1639008000&v=beta&t=4FU-nbkPKViALhzOvFs5uNqpTKfyHg8-GbJ0DaEz8Zs",
             name: "Eran Ribak",
             linkedin: "https://www.linkedin.com/in/eran-ribak-38a13434/",
             workAt: "IT Management Professional, The Coca-Cola Company",
@@ -63,7 +63,7 @@ export default {
           },
           {
             avatar:
-              "https://media-exp1.licdn.com/dms/image/C5603AQH_hNG1rOPVgg/profile-displayphoto-shrink_800_800/0/1607375937413?e=1630540800&v=beta&t=d4J28vi0EliFApaxUAicGrZWOtEy1mjlCEw9HWGBGlE",
+              "https://media-exp1.licdn.com/dms/image/C5603AQH_hNG1rOPVgg/profile-displayphoto-shrink_800_800/0/1607375937413?e=1639008000&v=beta&t=ZDFX1Wdh09Sa8-Yv0HV3ien336B7yf7SHOhmvXd1nhE",
             name: "Liel Bach",
             linkedin: "https://www.linkedin.com/in/liel-bach-140433100/",
             workAt: "Big Data Developer, Goverment",
